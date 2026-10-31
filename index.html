@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Codio Academy — Learn. Code. Innovate.</title>
+<meta name="description" data-i18n-content="meta.desc" content="Codio Academy: votre avenir IT commence ici. Coding, apprentissage intelligent, jeux vidéo, dev web/mobile, ERP, IA, soft skills — pour enfants, ados et jeunes adultes.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo"><span class="mark"></span>Codio Academy</a>
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#programs" data-i18n="nav.programs">Programs</a>
+      <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+      <a href="#journey" data-i18n="nav.journey">Journey</a>
+      <a href="#testimonials" data-i18n="nav.stories">Stories</a>
+      <a href="#available-programs" data-i18n="nav.avail">New Programs</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Get started</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" data-i18n-aria="nav.openMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu" data-i18n-aria="nav.closeMenu">✕</button>
+  <a href="#about" data-i18n="nav.about">About</a>
+  <a href="#programs" data-i18n="nav.programs">Programs</a>
+  <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+  <a href="#journey" data-i18n="nav.journey">Journey</a>
+  <a href="#testimonials" data-i18n="nav.stories">Stories</a>
+  <a href="#available-programs" data-i18n="nav.avail">New Programs</a>
+  <a href="#contact" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-glow-2" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Coding · Learning · Innovation</span>
+      <h1 data-i18n="hero.title">Your IT future <span class="hl">starts here</span></h1>
+      <p class="hero-lead" data-i18n="hero.lead">Apprendre en faisant. Coding, jeux, web, IA — pour tous les âges.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Enroll now →</a>
+        <a href="#programs" class="btn btn-ghost" data-i18n="hero.cta2">Explore programs</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orbit-ring or-1"></div>
+      <div class="orbit-ring or-2"></div>
+      <div class="orbit-ring or-3"><div class="orbit-dot"></div></div>
+      <div class="hero-card-stack">
+        <div class="hero-wordmark-card">
+          <img src="images/logo.png" alt="Codio Academy">
+          <span data-i18n="hero.tagline">Learn · Code · Innovate</span>
+        </div>
+      </div>
+      <div class="float-chip fc1"><span class="dot"></span><span data-i18n="hero.chip1">Entrepreneurship</span></div>
+      <div class="float-chip fc2"><span class="dot"></span><span data-i18n="hero.chip2">Game Dev</span></div>
+      <div class="float-chip fc3"><span class="dot"></span><span data-i18n="hero.chip3">AI &amp; Data</span></div>
+      <div class="float-chip fc4"><span class="dot"></span><span data-i18n="hero.chip4">Web &amp; Mobile</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span data-i18n="m1">Coding</span><span data-i18n="m2">Entrepreneurship</span><span data-i18n="m3">Game Development</span><span data-i18n="m4">Web Development</span><span data-i18n="m5">Mobile Development</span><span data-i18n="m6">3D Development</span><span data-i18n="m7">ERP Training</span><span data-i18n="m8">Databases &amp; AI</span><span data-i18n="m9">Linux &amp; Windows Systems</span><span data-i18n="m10">Integrations</span><span data-i18n="m11">Entrepreneurship</span><span data-i18n="m12">Soft Skills</span>
+    <span data-i18n="m1">Coding</span><span data-i18n="m2">Entrepreneurship</span><span data-i18n="m3">Game Development</span><span data-i18n="m4">Web Development</span><span data-i18n="m5">Mobile Development</span><span data-i18n="m6">3D Development</span><span data-i18n="m7">ERP Training</span><span data-i18n="m8">Databases &amp; AI</span><span data-i18n="m9">Linux &amp; Windows Systems</span><span data-i18n="m10">Integrations</span><span data-i18n="m11">Entrepreneurship</span><span data-i18n="m12">Soft Skills</span>
+  </div></div>
+
+<section class="stats-strip">
+  <div class="wrap stats-row">
+    <div class="stat-item reveal"><strong data-i18n="hero.meta1n">14+</strong><span data-i18n="hero.meta1l">Learning tracks</span></div>
+    <div class="stat-item reveal"><strong data-i18n="hero.meta2n">6–25+</strong><span data-i18n="hero.meta2l">Years, every stage</span></div>
+    <div class="stat-item reveal"><strong data-i18n="hero.meta3n">100%</strong><span data-i18n="hero.meta3l">Project-based</span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">About Codio Academy</span>
+        <h2 data-i18n="about.h2">We don't teach lessons.<br>We build builders.</h2>
+        <p data-i18n="about.p1">Codio Academy started with one belief: every learner has the raw material to become a creator — they just need the right studio, the right tools, and mentors who take their ideas seriously.</p>
+        <p data-i18n="about.p2">We blend technology, creativity and entrepreneurship into one hands-on curriculum where students don't just learn how things work — they build things that work. A robot. A playable game. A working app. A pitch deck. Real output, every term.</p>
+        <div class="why-row">
+          <div class="why-item"><strong data-i18n="about.why1t">Mentors, not lecturers</strong><span data-i18n="about.why1d">Small groups guided by builders who ship real projects themselves.</span></div>
+          <div class="why-item"><strong data-i18n="about.why2t">Made for every age</strong><span data-i18n="about.why2d">Curriculum that grows in depth from age 6 all the way to 25+.</span></div>
+          <div class="why-item"><strong data-i18n="about.why3t">Outcomes you can see</strong><span data-i18n="about.why3d">Every track ends in a portfolio piece, not just a certificate.</span></div>
+        </div>
+      </div>
+      <div class="mv-cards reveal">
+        <div class="mv-card">
+          <h3><span class="tag" data-i18n="about.mission">Mission</span></h3>
+          <p data-i18n="about.missionP">To equip the next generation with the technical, creative and entrepreneurial skills to turn their ideas into real, working projects — and the confidence to keep building beyond the classroom.</p>
+        </div>
+        <div class="mv-card">
+          <h3><span class="tag" data-i18n="about.vision">Vision</span></h3>
+          <p data-i18n="about.visionP">A generation of young creators, founders and innovators across the region who learned to build first, and ask permission second.</p>
+        </div>
+        <div class="mv-card">
+          <h3><span class="tag" data-i18n="about.why">Why families choose us</span></h3>
+          <p data-i18n="about.whyP">Project-based terms, age-matched tracks, transparent progress updates for parents, and a studio environment built specifically for young creators — not a scaled-down adult classroom.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMS BY AGE ============ -->
+<section id="programs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="prog.eyebrow">Programs by age group</span>
+      <h2 data-i18n="prog.h2">The right challenge, at every age</h2>
+      <p data-i18n="prog.p">Four tracks, each rebuilt from the ground up for how that age actually learns best — from first clicks to job-ready skills.</p>
+    </div>
+    <div class="programs-row">
+      <div class="prog-card reveal">
+        <span class="ring-ico"><img src="images/kids-explorers.png" alt="" loading="lazy"></span>
+        <span class="prog-age" data-i18n="prog.c1age">Ages 6–10</span>
+        <h3 data-i18n="prog.c1title">Young Explorers</h3>
+        <p data-i18n="prog.c1p">Playful first steps into code, Entrepreneurship and storytelling. Big imagination, simple tools, lots of color and lots of "I made this!" moments.</p>
+        <div class="prog-tags">
+          <span data-i18n="prog.c1t1">Block coding</span><span data-i18n="prog.c1t2">Intro Entrepreneurship</span><span data-i18n="prog.c1t3">Story games</span>
+        </div>
+      </div>
+      <div class="prog-card reveal">
+        <span class="ring-ico"><img src="images/young-innovators.png" alt="" loading="lazy"></span>
+        <span class="prog-age" data-i18n="prog.c2age">Ages 11–14</span>
+        <h3 data-i18n="prog.c2title">Young Innovators</h3>
+        <p data-i18n="prog.c2p">Real coding, first game builds, and first Entrepreneurship challenges. Pre-teens start shipping things they're genuinely proud to show friends.</p>
+        <div class="prog-tags">
+          <span data-i18n="prog.c2t1">Game dev basics</span><span data-i18n="prog.c2t2">Entrepreneurship</span><span data-i18n="prog.c2t3">Team challenges</span>
+        </div>
+      </div>
+      <div class="prog-card reveal">
+        <span class="ring-ico"><img src="images/future-builders.png" alt="" loading="lazy"></span>
+        <span class="prog-age" data-i18n="prog.c3age">Ages 15–18</span>
+        <h3 data-i18n="prog.c3title">Future Builders</h3>
+        <p data-i18n="prog.c3p">Web &amp; mobile development, 3D and game dev, first databases — plus the soft skills and entrepreneurship mindset that turn ideas into real launches.</p>
+        <div class="prog-tags">
+          <span data-i18n="prog.c3t1">Web &amp; Mobile Dev</span><span data-i18n="prog.c3t2">3D &amp; Game Dev</span><span data-i18n="prog.c3t3">Entrepreneurship</span>
+        </div>
+      </div>
+      <div class="prog-card reveal">
+        <span class="ring-ico"><img src="images/career-track.png" alt="" loading="lazy"></span>
+        <span class="prog-age" data-i18n="prog.c4age">Ages 19–25+</span>
+        <h3 data-i18n="prog.c4title">Career Track</h3>
+        <p data-i18n="prog.c4p">Job-ready technical depth: ERP systems, databases &amp; AI, Linux/Windows administration, system integrations — built for internships, freelancing, and first hires.</p>
+        <div class="prog-tags">
+          <span data-i18n="prog.c4t1">ERP &amp; Databases</span><span data-i18n="prog.c4t2">AI &amp; Systems</span><span data-i18n="prog.c4t3">Integrations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACKS ============ -->
+<section class="about" id="tracks">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tracks.eyebrow">Learning tracks</span>
+      <h2 data-i18n="tracks.h2">Ten ways to build something real</h2>
+      <p data-i18n="tracks.p">Students mix a technical skill with a creative or entrepreneurial one — a build-your-own curriculum.</p>
+    </div>
+    <div class="tracks-grid">
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/virtual-reality.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t1">Virtual Reality</h4><p data-i18n="tracks.t1d">Design and build immersive 3D worlds and experiences.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/game-development.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t2">Game Development</h4><p data-i18n="tracks.t2d">Design, code, and ship playable games from scratch.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/digital-painting.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t3">Digital Painting &amp; Arts</h4><p data-i18n="tracks.t3d">Illustration, character design, and creative visual storytelling.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/storytelling.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t4">Storytelling</h4><p data-i18n="tracks.t4d">Craft narratives that hook an audience, on screen or off.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/smart-thinking.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t5">Smart Learning</h4><p data-i18n="tracks.t5d">Study methods and tools that make learning anything faster.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/soft-skills.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t6">Soft Skills</h4><p data-i18n="tracks.t6d">Collaboration, leadership, and working well with others.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/entrepreneurship.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t7">Entrepreneurship</h4><p data-i18n="tracks.t7d">Turn an idea into a plan, a prototype, and a pitch.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/innovation.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t8">Innovation</h4><p data-i18n="tracks.t8d">Problem-solving frameworks for original, workable ideas.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/smart-thinking.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t9">Smart Thinking</h4><p data-i18n="tracks.t9d">Critical thinking and logic for sharper decisions.</p></div>
+      <div class="track-card reveal"><span class="ring-ico"><img src="images/communication-skills.png" alt="" loading="lazy"></span><h4 data-i18n="tracks.t10">Communication Skills</h4><p data-i18n="tracks.t10d">Public speaking and presenting with real confidence.</p></div>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:64px;">
+      <span class="eyebrow" data-i18n="stack.eyebrow">Career track · Ages 15–25+</span>
+      <h2 data-i18n="stack.h2">The professional tech stack</h2>
+      <p data-i18n="stack.p">For older teens and young adults heading into internships, freelancing, or their first tech job.</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-chip reveal"><span class="ico"><img src="images/mobile-development.png" alt="" loading="lazy"></span><span data-i18n="stack.s1">Mobile Development</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/web-development.png" alt="" loading="lazy"></span><span data-i18n="stack.s2">Web Development</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/3d-development.png" alt="" loading="lazy"></span><span data-i18n="stack.s3">3D Development</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/erp-training.png" alt="" loading="lazy"></span><span data-i18n="stack.s4">ERP Training</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/databases-ia.png" alt="" loading="lazy"></span><span data-i18n="stack.s5">Databases &amp; AI</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/operating-systems.png" alt="" loading="lazy"></span><span data-i18n="stack.s6">Linux &amp; Windows Systems</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/integrations.png" alt="" loading="lazy"></span><span data-i18n="stack.s7">Integrations</span></div>
+      <div class="stack-chip reveal"><span class="ico"><img src="images/soft-skills.png" alt="" loading="lazy"></span><span data-i18n="stack.s8">Soft Skills</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="benefits">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="ben.eyebrow">Why it works</span>
+      <h2 data-i18n="ben.h2">Built around doing, not memorizing</h2>
+      <p data-i18n="ben.p">Every benefit below isn't a teaching philosophy on a poster — it's how every single class actually runs.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="images/hands-on-learning.png" alt="" loading="lazy"></span><h4 data-i18n="ben.b1">Hands-on learning</h4><p data-i18n="ben.b1d">Hands on keyboards and hardware from day one — not slides.</p></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="images/project-based-education.png" alt="" loading="lazy"></span><h4 data-i18n="ben.b2">Project-based education</h4><p data-i18n="ben.b2d">Every term ends with a finished, shareable project.</p></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="images/creativity-development.png" alt="" loading="lazy"></span><h4 data-i18n="ben.b3">Creativity development</h4><p data-i18n="ben.b3d">Original thinking is graded as highly as technical skill.</p></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="images/future-ready-skills.png" alt="" loading="lazy"></span><h4 data-i18n="ben.b4">Future-ready skills</h4><p data-i18n="ben.b4d">The exact tools and mindsets today's tech careers need.</p></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="images/leadership-teamwork.png" alt="" loading="lazy"></span><h4 data-i18n="ben.b5">Leadership &amp; teamwork</h4><p data-i18n="ben.b5d">Group builds that mirror how real product teams work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDENT JOURNEY ============ -->
+<section id="journey">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="journey.eyebrow">The student journey</span>
+      <h2 data-i18n="journey.h2">From first idea to finished project</h2>
+      <p data-i18n="journey.p">Every Codio track follows the same five-step arc — so students always know what's next, and what they're working toward.</p>
+    </div>
+    <div class="journey-row">
+      <div class="journey-line" aria-hidden="true"></div>
+      <div class="journey-step reveal"><div class="journey-num">1</div><h4 data-i18n="journey.s1">Learn</h4><p data-i18n="journey.s1d">Core concepts taught through play, not lectures.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">2</div><h4 data-i18n="journey.s2">Create</h4><p data-i18n="journey.s2d">First sketches, prototypes and rough drafts.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">3</div><h4 data-i18n="journey.s3">Build</h4><p data-i18n="journey.s3d">The real project takes shape, piece by piece.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">4</div><h4 data-i18n="journey.s4">Present</h4><p data-i18n="journey.s4d">Show it to classmates, mentors, and family.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">5</div><h4 data-i18n="journey.s5">Grow</h4><p data-i18n="journey.s5d">Feedback fuels the next, more ambitious build.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="testi.eyebrow">Student &amp; parent stories</span>
+      <h2 data-i18n="testi.h2">Don't take our word for it</h2>
+      <p data-i18n="testi.p">Real feedback from families who've watched their kids go from curious to capable.</p>
+    </div>
+    <div class="testi-row">
+      <div class="testi-card reveal">
+        <div class="testi-video-wrap">
+          <video class="testi-video" controls preload="metadata" playsinline>
+            <source src="videos/story1.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="testi-person">
+          <div class="testi-avatar">R</div>
+          <div><strong data-i18n="testi.p1n">Mme Rachida</strong><span data-i18n="testi.p1r">Parent, Young Explorers track</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-video-wrap">
+          <video class="testi-video" controls preload="metadata" playsinline>
+            <source src="videos/story2.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="testi-person">
+          <div class="testi-avatar">H</div>
+          <div><strong data-i18n="testi.p2n">Mme Hajer</strong><span data-i18n="testi.p2r">Parent, Young Explorers track</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-video-wrap">
+          <video class="testi-video" controls preload="metadata" playsinline>
+            <source src="videos/story3.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="testi-person">
+          <div class="testi-avatar">C</div>
+          <div><strong data-i18n="testi.p3n">Codio Academy</strong><span data-i18n="testi.p3r">Students, Young Explorers track</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVAILABLE PROGRAMS ============ -->
+<section id="available-programs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="avail.eyebrow">New programs</span>
+      <h2 data-i18n="avail.h2">Available Programs</h2>
+      <p data-i18n="avail.p">Two new programs just launched — explore them below.</p>
+    </div>
+    <div class="programs-row avail-row">
+      <a class="prog-card avail-card reveal" href="pages/pfe-before-pfe.html">
+        <h3 data-i18n="avail.c1title">PFE Preparation</h3>
+        <p data-i18n="avail.c1desc">Guided, hands-on support to plan, build and defend your final-year project.</p>
+        <span class="avail-cta" data-i18n="avail.cta">Learn more →</span>
+      </a>
+      <a class="prog-card avail-card reveal" href="pages/programming-for-kids.html">
+        <h3 data-i18n="avail.c2title">Programming for Kids</h3>
+        <p data-i18n="avail.c2desc">A playful introduction to code, built just for young learners.</p>
+        <span class="avail-cta" data-i18n="avail.cta">Learn more →</span>
+      </a>
+      <a class="prog-card avail-card reveal" href="pages/internship-2026.html">
+        <h3 data-i18n="avail.c3title">Stages PFE accompagnés</h3>
+        <p data-i18n="avail.c3desc">Un encadrement technique, académique et méthodologique pour réaliser votre véritable projet de fin d'études, du cadrage à la soutenance.</p>
+        <span class="avail-cta" data-i18n="avail.c3cta">Découvrir nos stages PFE accompagnés →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA STRIP ============ -->
+<section class="cta-strip">
+  <div class="wrap">
+    <h2 data-i18n="ctaStrip.h2">Ready to see what you can build?</h2>
+    <p data-i18n="ctaStrip.p">Spots open now for the next term — every age, every track.</p>
+    <a href="#contact" class="btn btn-primary" data-i18n="ctaStrip.cta">Reserve a spot →</a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Enroll now</span>
+      <h2 data-i18n="contact.h2">Let's build your next project</h2>
+      <p data-i18n="contact.p">Tell us a bit about yourself (or your child) and we'll match you to the right track and age group within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="form-card reveal"
+      id="enrollForm"
+      action="https://formsubmit.co/codioacademy@outlook.com"
+      method="POST">
+
+    <!-- Configuration FormSubmit -->
+    <input type="hidden" name="_subject" value="Nouvelle demande d'inscription - Codio Academy">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Redirection après envoi -->
+    <input type="hidden" name="_next" value="merci.html">
+
+    <!-- Anti-spam -->
+    <input type="text" name="_honey" style="display:none">
+
+    <div class="form-row">
+        <div class="field">
+            <label for="parentName" data-i18n="contact.f1">Parent / Guardian name</label>
+            <input id="parentName"
+                   name="parentName"
+                   type="text"
+                   data-i18n-ph="contact.f1ph"
+                   placeholder="Full name">
+        </div>
+
+        <div class="field">
+            <label for="studentName" data-i18n="contact.f2">Student name</label>
+            <input id="studentName"
+                   name="studentName"
+                   type="text"
+                   data-i18n-ph="contact.f2ph"
+                   placeholder="Full name"
+                   required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="field">
+            <label for="age" data-i18n="contact.f3">Student age</label>
+            <select id="age" name="age" required>
+                <option value="" disabled selected data-i18n="contact.f3opt0">Select age range</option>
+                <option value="6-10 years" data-i18n="contact.f3opt1">6–10 years (Young Explorers)</option>
+                <option value="11-14 years" data-i18n="contact.f3opt2">11–14 years (Young Innovators)</option>
+                <option value="15-18 years" data-i18n="contact.f3opt3">15–18 years (Future Builders)</option>
+                <option value="19-25+ years" data-i18n="contact.f3opt4">19–25+ years (Career Track)</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="track" data-i18n="contact.f4">Interested track</label>
+            <select id="track" name="track">
+                <option value="" data-i18n="contact.f4opt0">Not sure yet — recommend one</option>
+                <option value="Virtual Reality" data-i18n="contact.f4opt1">Virtual Reality</option>
+                <option value="Game Development" data-i18n="contact.f4opt2">Game Development</option>
+                <option value="Digital Painting & Arts" data-i18n="contact.f4opt3">Digital Painting & Arts</option>
+                <option value="Storytelling" data-i18n="contact.f4opt4">Storytelling</option>
+                <option value="Web & Mobile Development" data-i18n="contact.f4opt5">Web & Mobile Development</option>
+                <option value="ERP & Databases" data-i18n="contact.f4opt6">ERP & Databases</option>
+                <option value="Entrepreneurship" data-i18n="contact.f4opt7">Entrepreneurship</option>
+                <option value="Soft Skills & Communication" data-i18n="contact.f4opt8">Soft Skills & Communication</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="field">
+            <label for="email" data-i18n="contact.f5">Email</label>
+            <input id="email"
+                   name="email"
+                   type="email"
+                   data-i18n-ph="contact.f5ph"
+                   placeholder="you@email.com"
+                   required>
+        </div>
+
+        <div class="field">
+            <label for="phone" data-i18n="contact.f6">Phone</label>
+            <input id="phone"
+                   name="phone"
+                   type="tel"
+                   dir="ltr"
+                   placeholder="+216 xx xxx xxx"
+                   required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="field full">
+            <label for="message" data-i18n="contact.f7">Anything we should know? (optional)</label>
+            <textarea id="message"
+                      name="message"
+                      rows="3"
+                      data-i18n-ph="contact.f7ph"
+                      placeholder="Tell us about your interests or goals..."></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" data-i18n="contact.submit">
+        Submit enrollment request →
+    </button>
+
+    <p class="form-note" data-i18n="contact.note">
+        We'll reach out within 24 hours. No payment required to apply.
+    </p>
+</form>
+
+      <div class="contact-info reveal">
+        <div class="info-block">
+          <h3 data-i18n="contact.getInTouch">Get in touch</h3>
+          <div class="info-item"><span class="ring-ico"><img src="images/location.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.loc">Studio location</strong><span data-i18n="contact.locV">Tunis, Tunisia — visits by appointment</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="images/email.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.email">Email</strong><span>codioacademy@outlook.com</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="images/phone-call.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.phone">Phone</strong><span dir="ltr">+216 28 80 29 29</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="images/working-time.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.hours">Office hours</strong><span data-i18n="contact.hoursV">Mon–Sat, 9:00–18:00</span></div></div>
+        </div>
+        <div class="map-note" data-i18n="contact.mapNote">📍 Studio visits are available by appointment — submit the form and we'll set up a time to show you around and meet the mentors.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span class="mark"></span>Codio Academy</a>
+        <p data-i18n="footer.tagline">A hands-on learning studio for ages 6–25+, building tech, creative and entrepreneurial skills through real projects.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explore</h4>
+        <a href="#about" data-i18n="nav.about">About us</a>
+        <a href="#programs" data-i18n="nav.programs">Programs</a>
+        <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+        <a href="#journey" data-i18n="nav.journey">Student journey</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.tracksH">Tracks</h4>
+        <a href="#tracks" data-i18n="footer.t1">Web &amp; Mobile Dev</a>
+        <a href="#tracks" data-i18n="footer.t2">Game Development</a>
+        <a href="#tracks" data-i18n="footer.t3">ERP &amp; Databases</a>
+        <a href="#tracks" data-i18n="footer.t4">Entrepreneurship</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contactH">Contact</h4>
+        <a href="#contact" data-i18n="footer.enroll">Enroll now</a>
+        <span>codioacademy@outlook.com</span>
+        <span dir="ltr">+216 28 80 29 29</span>
+        <span data-i18n="footer.location">Tunis, Tunisia</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Codio Academy. All rights reserved.</span>
+      <span data-i18n="footer.built">Built with curiosity, code, and a little bit of ambition.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/i18n-home.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

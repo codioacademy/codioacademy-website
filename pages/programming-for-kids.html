@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="kids.1">Codio Kids — Programming for Kids, 8 à 15 ans | Codio Academy</title>
+<meta name="description" content="Codio Kids : un programme de 12 semaines pour les 8–15 ans. Logique, Scratch, web, Python et un vrai projet présenté lors d'un Demo Day. 4 groupes selon l'âge et le niveau." data-i18n-content="kids.250">
+<meta property="og:title" content="Codio Kids — Programming for Kids | Codio Academy">
+<meta property="og:description" content="12 semaines pour apprendre la logique, la programmation et la création numérique, et présenter son propre projet lors d'un Demo Day.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+<!-- Composants partagés avec la page PFE (cartes, formulaire, timeline...) -->
+<link rel="stylesheet" href="../css/pfe-before-pfe.css">
+<link rel="stylesheet" href="../css/programming-for-kids.css">
+</head>
+<body>
+
+<!-- ============ NAV (réutilise le header du site) ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo"><span class="mark"></span>Codio Academy</a>
+    <div class="nav-links">
+      <a href="#programme" data-i18n="pfe.1">Le programme</a>
+      <a href="#semaines" data-i18n="kids.2">12 semaines</a>
+      <a href="#methode" data-i18n="kids.3">Méthode</a>
+      <a href="#projets" data-i18n="kids.4">Projets</a>
+      <a href="#infos" data-i18n="kids.5">Infos pratiques</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <span class="page-badge">Codio Kids</span>
+      <a href="#inscription" class="btn btn-primary btn-sm" data-i18n="pfe.6">Je m'inscris</a>
+      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" data-i18n-aria="pfe.122">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Fermer le menu" data-i18n-aria="pfe.123">✕</button>
+  <a href="#programme" data-i18n="pfe.1">Le programme</a>
+  <a href="#semaines" data-i18n="kids.2">12 semaines</a>
+  <a href="#methode" data-i18n="kids.3">Méthode</a>
+  <a href="#projets" data-i18n="kids.4">Projets</a>
+  <a href="#infos" data-i18n="kids.5">Infos pratiques</a>
+  <a href="#inscription" data-i18n="pfe.5">Inscription</a>
+  <a href="../index.html" data-i18n="int.9">Retour à l'accueil</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero pfe-hero kids-hero" id="top">
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="kids.6">Codio Academy · Kids</span>
+    <h1 data-i18n="kids.7">Codio Kids : apprendre à coder en créant.</h1>
+    <p class="hero-lead" data-i18n="kids.8">Un programme de 12 semaines pour les 8–15 ans : logique, programmation, création numérique et un vrai projet, présenté lors d'un Demo Day.</p>
+    <div class="hero-ctas">
+      <a href="#inscription" class="btn btn-primary" data-i18n="kids.9">Inscrire mon enfant →</a>
+      <a href="#semaines" class="btn btn-ghost" data-i18n="kids.10">Voir les 12 semaines</a>
+    </div>
+    <div class="hero-meta">
+      <div data-i18n="kids.11"><strong>8–15 ans</strong><br>enfants et adolescents</div>
+      <div data-i18n="kids.12"><strong>12 semaines</strong><br>jusqu'au Demo Day</div>
+      <div data-i18n="kids.13"><strong>4 groupes</strong><br>par âge et niveau</div>
+      <div data-i18n="kids.14"><strong>6–8 enfants</strong><br>par groupe</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 1. PRÉSENTATION DU PROGRAMME ============ -->
+<section id="programme" class="pfe-section">
+  <div class="wrap">
+    <div class="pfe-card reveal">
+      <span class="pfe-badge" data-i18n="kids.15">Programme 12 semaines</span>
+      <h2 class="pfe-title">Codio Kids</h2>
+      <p class="pfe-slogan" data-i18n="kids.16">« Apprendre aujourd'hui, créer demain. »</p>
+      <p class="pfe-desc" data-i18n="kids.17">Un programme pédagogique structuré pour apprendre la logique, la programmation, la création numérique et la réalisation de projets concrets. Le parcours est organisé selon l'âge, le niveau et l'autonomie de chaque enfant.</p>
+
+      <div class="pfe-stats">
+        <div class="pfe-stat"><strong>8–15</strong><span data-i18n="kids.18">Ans</span></div>
+        <div class="pfe-stat"><strong>12</strong><span data-i18n="kids.19">Semaines</span></div>
+        <div class="pfe-stat"><strong>4</strong><span data-i18n="kids.20">Groupes</span></div>
+        <div class="pfe-stat"><strong>6–8</strong><span data-i18n="kids.21">Enfants / groupe</span></div>
+        <div class="pfe-stat"><strong>1</strong><span data-i18n="kids.22">Projet + Demo Day</span></div>
+      </div>
+
+      <div class="pfe-value-grid">
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/smart-thinking.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="kids.23">Logique</h4>
+          <p data-i18n="kids.24">Raisonner étape par étape et apprendre à résoudre des problèmes.</p>
+        </div>
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/game-development.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="kids.25">Programmation</h4>
+          <p data-i18n="kids.26">Scratch, web et Python, selon l'âge et le niveau de l'enfant.</p>
+        </div>
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/innovation.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="kids.27">Création numérique</h4>
+          <p data-i18n="kids.28">Imaginer et fabriquer des jeux, des sites et des applications.</p>
+        </div>
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/project-based-education.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="kids.29">Projets concrets</h4>
+          <p data-i18n="kids.30">Chaque enfant réalise un projet et le présente lors d'un Demo Day.</p>
+        </div>
+      </div>
+
+      <a href="#inscription" class="btn btn-primary" data-i18n="kids.9">Inscrire mon enfant →</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="public">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="kids.31">Pour qui ?</span>
+      <h2 data-i18n="kids.32">Un parcours adapté à chaque âge et à chaque niveau.</h2>
+      <p data-i18n="kids.33">Quatre groupes pour que chaque enfant avance à son rythme, avec des défis à sa mesure.</p>
+    </div>
+    <div class="encadrement-grid">
+      <div class="mv-card reveal">
+        <h3><span class="tag" data-i18n="kids.34">Public cible</span></h3>
+        <p data-i18n="kids.35">Enfants et adolescents de 8 à 15 ans, répartis en quatre groupes selon l'âge et le niveau : Discover (8–9 ans), Explore (10–11 ans), Creator (12–13 ans) et Developer (14–15 ans).</p>
+      </div>
+      <div class="mv-card reveal">
+        <h3><span class="tag" data-i18n="kids.36">Prérequis et positionnement</span></h3>
+        <p data-i18n="kids.37">Aucun niveau d'expert n'est attendu : le parcours démarre au niveau débutant. Un test de positionnement permet d'ajuster le groupe si le niveau technique ne correspond pas exactement à l'âge.</p>
+      </div>
+      <div class="mv-card reveal">
+        <h3><span class="tag" data-i18n="kids.38">Objectifs pédagogiques</span></h3>
+        <p data-i18n="kids.39">Comprendre, pratiquer, résoudre un problème et produire quelque chose : l'objectif n'est pas seulement d'apprendre une technologie, mais de savoir s'en servir pour créer.</p>
+      </div>
+      <div class="mv-card reveal">
+        <h3><span class="tag" data-i18n="kids.40">Résultat attendu</span></h3>
+        <p data-i18n="kids.41">À la fin des 12 semaines, chaque enfant a développé sa logique, acquis des compétences adaptées à son âge, réalisé un projet concret et appris à l'expliquer — avec l'envie de continuer à apprendre et à créer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="competences">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="pfe.80">Compétences</span>
+      <h2 data-i18n="kids.42">Ce que votre enfant va développer</h2>
+    </div>
+    <div class="skills-grid kids-skills">
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="../images/smart-thinking.png" alt="" loading="lazy"></span><h4 data-i18n="kids.43">Logique et résolution de problèmes</h4></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="../images/game-development.png" alt="" loading="lazy"></span><h4 data-i18n="kids.44">Programmation : Scratch, JavaScript, Python</h4></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="../images/web-development.png" alt="" loading="lazy"></span><h4 data-i18n="kids.45">Création web : HTML, CSS</h4></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="../images/creativity-development.png" alt="" loading="lazy"></span><h4 data-i18n="kids.46">Créativité</h4></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="../images/team-work.png" alt="" loading="lazy"></span><h4 data-i18n="kids.47">Travail en équipe</h4></div>
+      <div class="benefit-card reveal"><span class="ring-ico"><img src="../images/presentation.png" alt="" loading="lazy"></span><h4 data-i18n="kids.48">Présenter et expliquer son travail</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. PROGRAMME DES 12 SEMAINES ============ -->
+<section id="semaines">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="kids.49">Programme des 12 semaines</span>
+      <h2 data-i18n="kids.50">Choisissez un groupe pour découvrir ses 12 semaines.</h2>
+      <p data-i18n="kids.51">Chaque semaine suit le même fil : comprendre, pratiquer, créer, partager. Le formateur adapte la difficulté au niveau réel du groupe.</p>
+    </div>
+
+    <div class="group-tabs" role="tablist" aria-label="Groupes Codio Kids" data-i18n-aria="kids.251">
+        <button class="group-tab" role="tab" id="tab-g1" aria-controls="panel-g1" aria-selected="true" tabindex="0" type="button">
+          <strong>G1</strong><span data-i18n="kids.52">8–9 ans</span><small>Discover</small>
+        </button>
+        <button class="group-tab" role="tab" id="tab-g2" aria-controls="panel-g2" aria-selected="false" tabindex="-1" type="button">
+          <strong>G2</strong><span data-i18n="kids.53">10–11 ans</span><small>Explore</small>
+        </button>
+        <button class="group-tab" role="tab" id="tab-g3" aria-controls="panel-g3" aria-selected="false" tabindex="-1" type="button">
+          <strong>G3</strong><span data-i18n="kids.54">12–13 ans</span><small>Creator</small>
+        </button>
+        <button class="group-tab" role="tab" id="tab-g4" aria-controls="panel-g4" aria-selected="false" tabindex="-1" type="button">
+          <strong>G4</strong><span data-i18n="kids.55">14–15 ans</span><small>Developer</small>
+        </button>
+    </div>
+
+      <div class="week-panel" id="panel-g1" role="tabpanel" aria-labelledby="tab-g1" tabindex="0">
+        <div class="group-head">
+          <h3><span class="group-name">G1 — Discover</span> <span class="page-badge" data-i18n="kids.52">8–9 ans</span></h3>
+          <div class="group-meta">
+            <div><span data-i18n="pfe.2">Parcours</span><strong data-i18n="pfe.109">Débutant</strong></div>
+            <div><span data-i18n="kids.56">Compétences principales</span><strong data-i18n="kids.57">Logique, Scratch, créativité, séquences, boucles, conditions</strong></div>
+            <div><span data-i18n="kids.58">Projet final</span><strong data-i18n="kids.59">Jeu Scratch personnel</strong><em data-i18n="kids.60">Projet individuel</em></div>
+            <div><span data-i18n="kids.61">Badge</span><strong>Game Creator / First Coder</strong></div>
+          </div>
+        </div>
+        <div class="weeks-grid">
+          <article class="week-card">
+            <span class="week-num">S1</span>
+            <h4 data-i18n="kids.62">Découvrir le numérique</h4>
+            <p data-i18n="kids.63">Ordinateur, applications, internet et règles de sécurité. Un « robot » humain pour comprendre qu&#x27;un ordinateur suit des instructions précises.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S2</span>
+            <h4 data-i18n="kids.64">Séquences et algorithmes</h4>
+            <p data-i18n="kids.65">Ordre, séquence et algorithme : recettes, parcours, déplacement d&#x27;un personnage.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S3</span>
+            <h4 data-i18n="kids.66">Premiers pas avec Scratch</h4>
+            <p data-i18n="kids.67">Interface, sprites, scènes, blocs de mouvement et événements. Mini-défi : une animation simple.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S4</span>
+            <h4 data-i18n="kids.68">Animation, dialogues et sons</h4>
+            <p data-i18n="kids.69">Messages, dialogues, arrière-plans et sons. Mini-projet : une petite histoire interactive.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S5</span>
+            <h4 data-i18n="kids.70">Les boucles</h4>
+            <p data-i18n="kids.71">Répéter, boucle infinie et répétition contrôlée, dans une animation ou un mini-jeu.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S6</span>
+            <h4 data-i18n="kids.72">Les conditions</h4>
+            <p data-i18n="kids.73">Si/alors, détection et règles du jeu : un personnage réagit à un obstacle ou à un événement.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S7</span>
+            <h4 data-i18n="kids.74">Variables : score et vies</h4>
+            <p data-i18n="kids.75">Créer et modifier une variable pour ajouter score, vies ou compteur à un jeu.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S8</span>
+            <h4 data-i18n="kids.76">Concevoir un jeu</h4>
+            <p data-i18n="kids.77">Idée, règles, personnages, objectif, difficulté et scénario. Création du cahier d&#x27;idées du projet final.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S9</span>
+            <h4 data-i18n="kids.78">Développement du jeu</h4>
+            <p data-i18n="kids.79">Construction du projet final : décors, personnages, mouvements, règles et interactions.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S10</span>
+            <h4 data-i18n="kids.80">Amélioration et créativité</h4>
+            <p data-i18n="kids.81">Ajouter niveaux, sons, effets, bonus ou difficulté. Travail sur l&#x27;expérience utilisateur.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S11</span>
+            <h4 data-i18n="kids.82">Tests et débogage</h4>
+            <p data-i18n="kids.83">Tester le jeu, trouver les bugs, corriger, simplifier et préparer la démonstration.</p>
+          </article>
+          <article class="week-card is-final">
+            <span class="week-num">S12</span><span class="week-flag" data-i18n="kids.84">Finale</span>
+            <h4>Demo Day</h4>
+            <p data-i18n="kids.85">Présentation devant le groupe et les parents : idée, démonstration et feedback.</p>
+          </article>
+        </div>
+      </div>
+      <div class="week-panel" id="panel-g2" role="tabpanel" aria-labelledby="tab-g2" tabindex="0">
+        <div class="group-head">
+          <h3><span class="group-name">G2 — Explore</span> <span class="page-badge" data-i18n="kids.53">10–11 ans</span></h3>
+          <div class="group-meta">
+            <div><span data-i18n="pfe.2">Parcours</span><strong data-i18n="kids.86">Débutant / intermédiaire</strong></div>
+            <div><span data-i18n="kids.56">Compétences principales</span><strong data-i18n="kids.87">Scratch avancé, HTML, CSS, JavaScript, introduction à Python</strong></div>
+            <div><span data-i18n="kids.58">Projet final</span><strong data-i18n="kids.88">Mini-site + projet interactif</strong><em data-i18n="kids.60">Projet individuel</em></div>
+            <div><span data-i18n="kids.61">Badge</span><strong>Explore / Web Creator</strong></div>
+          </div>
+        </div>
+        <div class="weeks-grid">
+          <article class="week-card">
+            <span class="week-num">S1</span>
+            <h4 data-i18n="kids.89">Logique et algorithmes</h4>
+            <p data-i18n="kids.90">Conditions, boucles et décomposition d&#x27;un problème. Exercices de logique et pseudo-code.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S2</span>
+            <h4 data-i18n="kids.91">Scratch avancé</h4>
+            <p data-i18n="kids.92">Messages, variables, conditions imbriquées, clones et interactions. Défi : un mini-jeu plus complet.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S3</span>
+            <h4 data-i18n="kids.93">Projet Scratch intermédiaire</h4>
+            <p data-i18n="kids.94">Conception, développement et test d&#x27;un jeu ou d&#x27;une animation. Débogage et amélioration.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S4</span>
+            <h4 data-i18n="kids.95">HTML : créer une page</h4>
+            <p data-i18n="kids.96">Titres, paragraphes, images, liens et listes. Création d&#x27;une première page personnelle.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S5</span>
+            <h4 data-i18n="kids.97">CSS : rendre le site attractif</h4>
+            <p data-i18n="kids.98">Couleurs, tailles, espacements, bordures, mise en page et classes.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S6</span>
+            <h4 data-i18n="kids.99">Mini-site personnel</h4>
+            <p data-i18n="kids.100">Plusieurs sections ou pages, navigation et présentation d&#x27;un sujet choisi.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S7</span>
+            <h4 data-i18n="kids.101">JavaScript : page interactive</h4>
+            <p data-i18n="kids.102">Variables, événements, fonctions simples et interactions avec l&#x27;utilisateur.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S8</span>
+            <h4 data-i18n="kids.103">Quiz interactif</h4>
+            <p data-i18n="kids.104">Questions, réponses, score et feedback. Introduction simplifiée au DOM.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S9</span>
+            <h4 data-i18n="kids.105">Python : premiers pas</h4>
+            <p data-i18n="kids.106">Variables, types simples, entrées/sorties, conditions et boucles.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S10</span>
+            <h4 data-i18n="kids.107">Mini-projet Python</h4>
+            <p data-i18n="kids.108">Un programme simple : quiz, calculateur, jeu de devinettes ou gestion de score.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S11</span>
+            <h4 data-i18n="kids.58">Projet final</h4>
+            <p data-i18n="kids.109">Choix du projet, planification, développement et tests, en combinant les compétences acquises.</p>
+          </article>
+          <article class="week-card is-final">
+            <span class="week-num">S12</span><span class="week-flag" data-i18n="kids.84">Finale</span>
+            <h4 data-i18n="pfe.76">Présentation</h4>
+            <p data-i18n="kids.110">Démonstration du projet, explication des choix et feedback.</p>
+          </article>
+        </div>
+      </div>
+      <div class="week-panel" id="panel-g3" role="tabpanel" aria-labelledby="tab-g3" tabindex="0">
+        <div class="group-head">
+          <h3><span class="group-name">G3 — Creator</span> <span class="page-badge" data-i18n="kids.54">12–13 ans</span></h3>
+          <div class="group-meta">
+            <div><span data-i18n="pfe.2">Parcours</span><strong data-i18n="pfe.110">Intermédiaire</strong></div>
+            <div><span data-i18n="kids.56">Compétences principales</span><strong data-i18n="kids.111">HTML, CSS, JavaScript, DOM, Python, conception de projet</strong></div>
+            <div><span data-i18n="kids.58">Projet final</span><strong data-i18n="kids.112">Application web interactive</strong><em data-i18n="kids.113">Binômes ou équipes de 2–3</em></div>
+            <div><span data-i18n="kids.61">Badge</span><strong>Creator / Project Presenter</strong></div>
+          </div>
+        </div>
+        <div class="weeks-grid">
+          <article class="week-card">
+            <span class="week-num">S1</span>
+            <h4 data-i18n="kids.114">Algorithmes et résolution de problèmes</h4>
+            <p data-i18n="kids.115">Décomposition, pseudo-code, conditions, boucles et fonctions.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S2</span>
+            <h4>HTML</h4>
+            <p data-i18n="kids.116">Structure sémantique, formulaires simples, liens, médias et organisation d&#x27;une page.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S3</span>
+            <h4 data-i18n="kids.117">CSS et responsive</h4>
+            <p data-i18n="kids.118">Sélecteurs, box model, Flexbox, organisation responsive et design d&#x27;interface.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S4</span>
+            <h4>JavaScript</h4>
+            <p data-i18n="kids.119">Variables, conditions, boucles, fonctions, événements et logique interactive.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S5</span>
+            <h4>DOM</h4>
+            <p data-i18n="kids.120">Sélection et modification d&#x27;éléments HTML, événements et interface dynamique.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S6</span>
+            <h4 data-i18n="kids.121">Application interactive</h4>
+            <p data-i18n="kids.122">Un quiz, un calculateur, un gestionnaire de tâches simple ou une autre application web.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S7</span>
+            <h4>Python</h4>
+            <p data-i18n="kids.123">Syntaxe, variables, conditions, boucles, fonctions et structures de données simples.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S8</span>
+            <h4 data-i18n="kids.124">Projet Python</h4>
+            <p data-i18n="kids.125">Un petit programme avec entrées utilisateur, logique et traitement de données.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S9</span>
+            <h4 data-i18n="kids.126">Cahier des charges du projet final</h4>
+            <p data-i18n="kids.127">Besoin, utilisateurs, fonctionnalités, interface, contraintes et livrables.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S10</span>
+            <h4 data-i18n="pfe.73">Développement</h4>
+            <p data-i18n="kids.128">Réalisation du projet en équipe, avec suivi technique et résolution des problèmes.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S11</span>
+            <h4 data-i18n="kids.129">Tests et documentation</h4>
+            <p data-i18n="kids.130">Tests fonctionnels, correction des bugs, documentation courte et préparation de la présentation.</p>
+          </article>
+          <article class="week-card is-final">
+            <span class="week-num">S12</span><span class="week-flag" data-i18n="kids.84">Finale</span>
+            <h4>Demo Day</h4>
+            <p data-i18n="kids.131">Présentation de l&#x27;application, démonstration, questions/réponses et feedback.</p>
+          </article>
+        </div>
+      </div>
+      <div class="week-panel" id="panel-g4" role="tabpanel" aria-labelledby="tab-g4" tabindex="0">
+        <div class="group-head">
+          <h3><span class="group-name">G4 — Developer</span> <span class="page-badge" data-i18n="kids.55">14–15 ans</span></h3>
+          <div class="group-meta">
+            <div><span data-i18n="pfe.2">Parcours</span><strong data-i18n="kids.132">Intermédiaire / avancé</strong></div>
+            <div><span data-i18n="kids.56">Compétences principales</span><strong data-i18n="kids.133">Python, Web, API, Git/GitHub, cahier des charges, tests</strong></div>
+            <div><span data-i18n="kids.58">Projet final</span><strong data-i18n="kids.134">Mini-application complète</strong><em data-i18n="kids.135">Équipes de 2–3</em></div>
+            <div><span data-i18n="kids.61">Badge</span><strong>Young Developer / Project Presenter</strong></div>
+          </div>
+        </div>
+        <div class="weeks-grid">
+          <article class="week-card">
+            <span class="week-num">S1</span>
+            <h4 data-i18n="kids.136">Algorithmes et structures de données</h4>
+            <p data-i18n="kids.137">Algorithmes, complexité intuitive, listes/tableaux, conditions, boucles et fonctions.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S2</span>
+            <h4 data-i18n="kids.138">Python : fondamentaux</h4>
+            <p data-i18n="kids.139">Variables, types, conditions, boucles, fonctions et bonnes pratiques de code.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S3</span>
+            <h4 data-i18n="kids.140">Python : modules, fichiers, exceptions</h4>
+            <p data-i18n="kids.141">Organisation du code, modules, lecture/écriture de fichiers et gestion des erreurs.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S4</span>
+            <h4 data-i18n="kids.124">Projet Python</h4>
+            <p data-i18n="kids.142">Une mini-application : gestion de données, quiz, outil ou jeu. Tests et amélioration du code.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S5</span>
+            <h4 data-i18n="kids.143">Web : HTML/CSS</h4>
+            <p data-i18n="kids.144">Structure d&#x27;une interface, CSS moderne, responsive design et organisation d&#x27;un projet web.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S6</span>
+            <h4>JavaScript</h4>
+            <p data-i18n="kids.145">Logique, fonctions, événements, DOM et interactions avancées.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S7</span>
+            <h4 data-i18n="kids.146">APIs et données</h4>
+            <p data-i18n="kids.147">Principe d&#x27;une API, requêtes, JSON et intégration de données externes.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S8</span>
+            <h4 data-i18n="kids.148">Git et GitHub</h4>
+            <p data-i18n="kids.149">Versioning, dépôt, commit, branches de base, historique et collaboration.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S9</span>
+            <h4 data-i18n="kids.150">Cahier des charges</h4>
+            <p data-i18n="kids.151">Besoin, utilisateurs, fonctionnalités, architecture, planning, rôles et critères de réussite.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S10</span>
+            <h4 data-i18n="kids.152">Développement du projet final</h4>
+            <p data-i18n="kids.153">Travail en équipe de 2–3 : fonctionnalités principales, intégration et suivi.</p>
+          </article>
+          <article class="week-card">
+            <span class="week-num">S11</span>
+            <h4 data-i18n="kids.154">Tests, documentation et présentation</h4>
+            <p data-i18n="kids.155">Tests, correction, README/documentation, préparation du pitch et de la démonstration.</p>
+          </article>
+          <article class="week-card is-final">
+            <span class="week-num">S12</span><span class="week-flag" data-i18n="kids.84">Finale</span>
+            <h4>Demo Day</h4>
+            <p data-i18n="kids.156">Présentation finale devant le groupe et les parents : démonstration, questions/réponses et évaluation.</p>
+          </article>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ============ 3. MÉTHODOLOGIE ============ -->
+<section class="about" id="methode">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="kids.157">Méthode d'apprentissage</span>
+      <h2 class="method-title"><span dir="ltr">Learn → Practice → Create → Present</span></h2>
+      <p data-i18n="kids.158">Chaque séance est active et orientée vers la création : on apprend une notion, on la pratique, puis on construit quelque chose avec.</p>
+    </div>
+
+    <div class="journey-row">
+      <div class="journey-line" aria-hidden="true"></div>
+      <div class="journey-step reveal"><div class="journey-num">1</div><h4>Challenge</h4><p class="step-time" data-i18n="kids.159">10 min</p><p data-i18n="kids.160">Un défi court pour stimuler la réflexion et réactiver les connaissances.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">2</div><h4>Learn</h4><p class="step-time" data-i18n="kids.161">15–20 min</p><p data-i18n="kids.162">Une nouvelle notion expliquée par démonstration et exemples.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">3</div><h4>Practice</h4><p class="step-time" data-i18n="kids.163">20–30 min</p><p data-i18n="kids.164">Des exercices guidés, puis une autonomie progressive.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">4</div><h4>Create</h4><p class="step-time" data-i18n="kids.165">30–40 min</p><p data-i18n="kids.166">Construction du projet ou de la fonctionnalité du jour.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">5</div><h4>Share</h4><p class="step-time" data-i18n="kids.159">10 min</p><p data-i18n="kids.167">Démonstration, feedback et retour d'expérience.</p></div>
+    </div>
+    <p class="method-note reveal" data-i18n="kids.168">Durées indicatives de chaque phase d'une séance.</p>
+
+    <div class="split-card reveal">
+      <h3 data-i18n="kids.169">Où passe le temps ?</h3>
+      <div class="split-bar" role="img" aria-label="Répartition globale : 20 % découverte et théorie, 30 % exercices, 40 % projet, 10 % présentation" data-i18n-aria="kids.252">
+        <span style="flex:20" class="s1">20 %</span>
+        <span style="flex:30" class="s2">30 %</span>
+        <span style="flex:40" class="s3">40 %</span>
+        <span style="flex:10" class="s4">10 %</span>
+      </div>
+      <ul class="split-legend">
+        <li><i class="s1"></i><strong data-i18n="kids.170">Découverte / théorie</strong></li>
+        <li><i class="s2"></i><strong data-i18n="kids.171">Exercices</strong></li>
+        <li><i class="s3"></i><strong data-i18n="pfe.17">Projet</strong></li>
+        <li><i class="s4"></i><strong data-i18n="pfe.76">Présentation</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. PROJETS ============ -->
+<section id="projets">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="kids.4">Projets</span>
+      <h2 data-i18n="kids.172">Ce que les enfants vont créer.</h2>
+      <p data-i18n="kids.173">Chaque participant réalise un projet adapté à son niveau, puis le présente lors du Demo Day.</p>
+    </div>
+    <div class="parcours-grid">
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/game-development.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="kids.59">Jeu Scratch personnel</h4>
+        <p class="desc" data-i18n="kids.174"><strong>G1 · Discover.</strong> Un jeu imaginé et construit de A à Z : personnages, règles, score et vies, niveaux, sons et effets.</p>
+        <div class="prog-tags"><span>Scratch</span><span data-i18n="kids.175">Boucles</span><span data-i18n="kids.176">Conditions</span><span data-i18n="kids.177">Variables</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/web-development.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="kids.88">Mini-site + projet interactif</h4>
+        <p class="desc" data-i18n="kids.178"><strong>G2 · Explore.</strong> Un mini-site personnel avec navigation, puis un projet qui combine les compétences acquises.</p>
+        <div class="prog-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/innovation.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="kids.112">Application web interactive</h4>
+        <p class="desc" data-i18n="kids.179"><strong>G3 · Creator.</strong> Une application conçue en équipe à partir d'un cahier des charges, avec tests et documentation courte.</p>
+        <div class="prog-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>DOM</span><span>Python</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/version-controle.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="kids.134">Mini-application complète</h4>
+        <p class="desc" data-i18n="kids.180"><strong>G4 · Developer.</strong> Une application développée en équipe de 2–3, avec cahier des charges, API, Git/GitHub, tests et README.</p>
+        <div class="prog-tags"><span>Python</span><span>Web</span><span>API</span><span>Git/GitHub</span></div>
+      </div>
+    </div>
+
+    <div class="final-project reveal">
+      <h3 data-i18n="kids.181">Le projet final en 5 étapes</h3>
+      <ol class="final-steps">
+        <li><strong data-i18n="kids.182">Idée</strong><span data-i18n="kids.183">Chaque enfant ou équipe choisit une idée adaptée à son niveau.</span></li>
+        <li><strong data-i18n="kids.184">Cahier d'idées</strong><span data-i18n="kids.185">Objectif, utilisateurs, fonctionnalités, technologies, résultat attendu.</span></li>
+        <li><strong data-i18n="pfe.73">Développement</strong><span data-i18n="kids.186">Réalisation progressive, avec l'accompagnement du formateur.</span></li>
+        <li><strong data-i18n="pfe.74">Tests</strong><span data-i18n="kids.187">Recherche de bugs, corrections et améliorations.</span></li>
+        <li><strong data-i18n="pfe.76">Présentation</strong><span data-i18n="kids.188">Démonstration, explication des choix, retour d'expérience.</span></li>
+      </ol>
+    </div>
+
+    <div class="soutenance-highlight reveal">
+      <h3 data-i18n="kids.189">Demo Day : le moment de montrer son travail.</h3>
+      <p data-i18n="kids.190">L'événement final où les enfants présentent leur projet devant les autres participants et, idéalement, leurs parents : idée, démonstration, questions et feedback.</p>
+    </div>
+
+    <div class="badges-block reveal">
+      <h3 data-i18n="kids.191">Badges et motivation</h3>
+      <div class="badge-grid">
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Logic Master</strong><em data-i18n="kids.192">Résoudre des problèmes et raisonner étape par étape</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>First Coder</strong><em data-i18n="kids.193">Écrire et comprendre ses premières instructions</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Game Creator</strong><em data-i18n="kids.194">Créer un jeu fonctionnel</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Web Creator</strong><em data-i18n="kids.195">Créer une page ou un mini-site</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Python Explorer</strong><em data-i18n="kids.196">Réaliser un programme Python</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Bug Hunter</strong><em data-i18n="kids.197">Identifier et corriger des erreurs</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Project Presenter</strong><em data-i18n="kids.198">Présenter clairement son projet</em></div>
+        <div class="badge-item"><span aria-hidden="true">★</span><strong>Young Developer</strong><em data-i18n="kids.199">Réaliser un projet complet avec une démarche de développement</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. INFORMATIONS PRATIQUES ============ -->
+<section class="about" id="infos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="kids.200">Informations pratiques</span>
+      <h2 data-i18n="kids.201">Tout savoir sur l'organisation.</h2>
+    </div>
+    <div class="kids-info-grid">
+      <div class="mv-card reveal">
+        <span class="ring-ico"><img src="../images/working-time.png" alt="" loading="lazy"></span>
+        <h3><span class="tag" data-i18n="pfe.13">Durée</span></h3>
+        <p data-i18n="kids.202">12 semaines, de la découverte jusqu'au Demo Day.</p>
+      </div>
+      <div class="mv-card reveal">
+        <span class="ring-ico"><img src="../images/team-work.png" alt="" loading="lazy"></span>
+        <h3><span class="tag" data-i18n="kids.20">Groupes</span></h3>
+        <p data-i18n="kids.203">4 groupes selon l'âge et le niveau. Taille idéale : 6 à 8 enfants, avec 8 participants maximum par groupe.</p>
+      </div>
+      <div class="mv-card reveal">
+        <span class="ring-ico"><img src="../images/project-based-education.png" alt="" loading="lazy"></span>
+        <h3><span class="tag" data-i18n="kids.4">Projets</span></h3>
+        <p data-i18n="kids.204">Individuels pour les 8–11 ans pour développer l'autonomie ; en binômes ou équipes de 2–3 pour les 12–15 ans pour apprendre à collaborer.</p>
+      </div>
+      <div class="mv-card reveal">
+        <span class="ring-ico"><img src="../images/supervision.png" alt="" loading="lazy"></span>
+        <h3><span class="tag" data-i18n="int.4">Accompagnement</span></h3>
+        <p data-i18n="kids.205">Le formateur différencie les exercices au sein d'un même groupe : niveau standard, défi avancé ou accompagnement renforcé.</p>
+      </div>
+      <div class="mv-card reveal">
+        <span class="ring-ico"><img src="../images/smart-learning.png" alt="" loading="lazy"></span>
+        <h3><span class="tag" data-i18n="kids.206">Test de positionnement</span></h3>
+        <p data-i18n="kids.207">Il permet d'ajuster le groupe de l'enfant si son niveau technique ne correspond pas exactement à son âge.</p>
+      </div>
+      <div class="mv-card reveal">
+        <span class="ring-ico"><img src="../images/phone-call.png" alt="" loading="lazy"></span>
+        <h3><span class="tag" data-i18n="pfe.5">Inscription</span></h3>
+        <p data-i18n="kids.208">Remplissez le formulaire ci-dessous. Pour connaître les prochaines sessions, les dates et les modalités, notre équipe vous répond directement.</p>
+      </div>
+    </div>
+
+    <div class="eval-card reveal">
+      <h3 data-i18n="kids.209">Comment la progression est évaluée</h3>
+      <div class="eval-grid">
+        <div class="eval-row"><div class="eval-label"><strong data-i18n="pfe.17">Projet</strong><span>30 %</span></div><div class="eval-bar"><i style="width:30%"></i></div><p data-i18n="kids.210">Fonctionnalité, progression, qualité et finalisation.</p></div>
+        <div class="eval-row"><div class="eval-label"><strong data-i18n="kids.211">Compétences techniques</strong><span>25 %</span></div><div class="eval-bar"><i style="width:25%"></i></div><p data-i18n="kids.212">Utilisation correcte des outils et technologies.</p></div>
+        <div class="eval-row"><div class="eval-label"><strong data-i18n="kids.213">Compréhension</strong><span>20 %</span></div><div class="eval-bar"><i style="width:20%"></i></div><p data-i18n="kids.214">Compréhension des notions et capacité à les expliquer.</p></div>
+        <div class="eval-row"><div class="eval-label"><strong data-i18n="kids.46">Créativité</strong><span>10 %</span></div><div class="eval-bar"><i style="width:10%"></i></div><p data-i18n="kids.215">Originalité et capacité à proposer des idées.</p></div>
+        <div class="eval-row"><div class="eval-label"><strong data-i18n="kids.47">Travail en équipe</strong><span>10 %</span></div><div class="eval-bar"><i style="width:10%"></i></div><p data-i18n="kids.216">Communication, collaboration et répartition des tâches.</p></div>
+        <div class="eval-row"><div class="eval-label"><strong data-i18n="pfe.76">Présentation</strong><span>5 %</span></div><div class="eval-bar"><i style="width:5%"></i></div><p data-i18n="kids.217">Démonstration, explication et confiance.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. CALL TO ACTION ============ -->
+<section class="cta-strip">
+  <div class="wrap">
+    <h2 data-i18n="kids.218">Prêt à rejoindre Codio Kids ?</h2>
+    <p data-i18n="kids.219">Apprendre aujourd'hui, créer demain : inscrivez votre enfant et laissez-le construire son premier vrai projet.</p>
+    <div class="hero-ctas cta-actions">
+      <a href="#inscription" class="btn btn-primary" data-i18n="kids.9">Inscrire mon enfant →</a>
+      <a href="../index.html" class="btn btn-ghost" data-i18n="int.9">Retour à l'accueil</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSCRIPTION (formulaire intégré) ============ -->
+<section id="inscription">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="pfe.5">Inscription</span>
+      <h2 data-i18n="kids.220">Inscrire mon enfant à Codio Kids</h2>
+      <p data-i18n="kids.221">Ce formulaire est à remplir par un parent ou un tuteur. Notre équipe vous contactera pour les prochaines étapes.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="kids-form-col">
+        <form class="form-card reveal" id="kidsForm" action="https://formsubmit.co/codioacademy@outlook.com" method="POST" novalidate>
+
+          <!-- Configuration FormSubmit (même destinataire que les autres formulaires du site) -->
+          <input type="hidden" name="_subject" id="kidsSubject" value="Inscription Codio Kids">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="Groupe_indicatif" id="kidsGroupField" value="">
+
+          <p class="section-head" style="margin-bottom:20px;"><strong style="font-size:15px;color:var(--ink);" data-i18n="kids.222">Parent / tuteur</strong></p>
+          <div class="form-row">
+            <div class="field full">
+              <label for="kidsParent" data-i18n="kids.223">Nom et prénom du parent / tuteur</label>
+              <input id="kidsParent" name="Parent_tuteur" type="text" placeholder="Nom et prénom" data-i18n-ph="kids.253">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="kidsEmail" data-i18n="contact.f5">Email</label>
+              <input id="kidsEmail" name="Email" type="email" placeholder="vous@email.com" data-i18n-ph="contact.f5ph">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="kidsPhone" data-i18n="contact.f6">Téléphone</label>
+              <input id="kidsPhone" name="Téléphone" type="tel" dir="ltr" placeholder="+216 xx xxx xxx">
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <p class="section-head" style="margin:28px 0 20px;"><strong style="font-size:15px;color:var(--ink);" data-i18n="kids.224">L'enfant</strong></p>
+          <div class="form-row">
+            <div class="field">
+              <label for="kidsChild" data-i18n="kids.225">Prénom de l'enfant</label>
+              <input id="kidsChild" name="Prénom_enfant" type="text" placeholder="Prénom" data-i18n-ph="pfe.99">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="kidsAge" data-i18n="kids.226">Âge</label>
+              <select id="kidsAge" name="Age_enfant">
+                <option value="" disabled selected data-i18n="kids.227">Choisir l'âge</option>
+                <option value="8" data-i18n="kids.228">8 ans</option>
+                <option value="9" data-i18n="kids.229">9 ans</option>
+                <option value="10" data-i18n="kids.230">10 ans</option>
+                <option value="11" data-i18n="kids.231">11 ans</option>
+                <option value="12" data-i18n="kids.232">12 ans</option>
+                <option value="13" data-i18n="kids.233">13 ans</option>
+                <option value="14" data-i18n="kids.234">14 ans</option>
+                <option value="15" data-i18n="kids.235">15 ans</option>
+              </select>
+              <span class="field-error"></span>
+              <span class="form-hint" id="kidsGroupHint" data-i18n="kids.236">Le programme s'adresse aux 8–15 ans.</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full">
+              <label for="kidsLevel" data-i18n="kids.237">Expérience en programmation</label>
+              <select id="kidsLevel" name="Niveau_declare">
+                <option value="" disabled selected data-i18n="kids.238">Choisir une option</option>
+                <option value="Débutant (aucune expérience)" data-i18n="kids.239">Débutant (aucune expérience)</option>
+                <option value="A déjà quelques bases" data-i18n="kids.240">A déjà quelques bases</option>
+                <option value="Niveau plus avancé" data-i18n="kids.241">Niveau plus avancé</option>
+                <option value="Je ne sais pas" data-i18n="kids.242">Je ne sais pas</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full">
+              <label for="kidsMessage" data-i18n="kids.243">Message (optionnel)</label>
+              <textarea id="kidsMessage" name="Message" rows="3" placeholder="Une question, une précision sur votre enfant..." data-i18n-ph="kids.254"></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-bottom:6px;">
+            <div class="field full">
+              <div class="field-checkbox">
+                <input id="kidsConsent" name="Consentement" type="checkbox" value="Parent/tuteur, accepte d'être contacté">
+                <label for="kidsConsent" style="text-transform:none;letter-spacing:0;font-family:var(--body);font-size:13.5px;" data-i18n="kids.244">Je suis le parent ou le tuteur légal de l'enfant et j'accepte d'être contacté par Codio Academy à propos de ce programme.</label>
+              </div>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-i18n="kids.245">Envoyer la demande d'inscription</button>
+          <p class="form-note" data-i18n="kids.246">La demande est envoyée directement à notre équipe.</p>
+        </form>
+
+        <!-- Feedback affiché après envoi réussi -->
+        <div class="form-card form-success" id="kidsSuccess">
+          <span class="check-badge">✓</span>
+          <h3 data-i18n="kids.247">Merci pour votre demande !</h3>
+          <p data-i18n="kids.248">Votre demande d'inscription a bien été envoyée à l'équipe Codio Academy, qui vous contactera prochainement.</p>
+        </div>
+      </div>
+
+      <div class="contact-info reveal">
+        <div class="info-block">
+          <h3 data-i18n="contact.getInTouch">Nous contacter</h3>
+          <div class="info-item"><span class="ring-ico"><img src="../images/location.png" alt="" loading="lazy"></span><div><strong data-i18n="pfe.117">Studio</strong><span data-i18n="contact.locV">Novation City, Sousse, Tunisie — visites sur rendez-vous</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="../images/email.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.f5">Email</strong><span>codioacademy@outlook.com</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="../images/phone-call.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.f6">Téléphone</strong><span dir="ltr">+216 28 80 29 29</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="../images/working-time.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.hours">Horaires</strong><span data-i18n="contact.hoursV">Lun–Sam, 9h–18h</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (réutilise le footer du site) ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo"><span class="mark"></span>Codio Academy</a>
+        <p data-i18n="footer.tagline">Un studio d'apprentissage pratique pour les 6–25 ans et plus, qui développe des compétences techniques, créatives et entrepreneuriales par de vrais projets.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explorer</h4>
+        <a href="../index.html#about" data-i18n="nav.about">À&nbsp;propos</a>
+        <a href="../index.html#programs" data-i18n="nav.programs">Programmes</a>
+        <a href="../index.html#tracks" data-i18n="nav.tracks">Filières</a>
+        <a href="../index.html#journey" data-i18n="nav.journey">Parcours</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.programs">Programmes</h4>
+        <a href="#top">Codio Kids</a>
+        <a href="pfe-before-pfe.html">PFE 9bal el PFE</a>
+        <a href="internship-2026.html" data-i18n="avail.c3title">Stages PFE accompagnés</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.contact">Contact</h4>
+        <a href="#inscription" data-i18n="kids.249">Inscrire mon enfant</a>
+        <span>codioacademy@outlook.com</span>
+        <span dir="ltr">+216 28 80 29 29</span>
+        <span data-i18n="footer.location">Novation City, Sousse, Tunisie</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Codio Academy. Tous droits réservés.</span>
+      <span data-i18n="footer.built">Construit avec curiosité, code, et un peu d'ambition.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/i18n-home.js"></script>
+<script src="../js/i18n-pages.js"></script>
+<script src="../js/programming-for-kids.js"></script>
+</body>
+</html>

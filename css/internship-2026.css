@@ -1,0 +1,78 @@
+/* ============================================================
+   internship-2026.css
+   Page "Stages PFE accompagnés".
+   Ce fichier NE redéfinit AUCUN token. Il s'appuie sur ../css/style.css
+   et sur les composants de ../css/pfe-before-pfe.css (chargés avant lui)
+   et n'ajoute que ce qui est propre à cette page.
+   ============================================================ */
+
+/* ---------- Hero : équilibrer les retours à la ligne du titre ---------- */
+.pfe-hero h1{text-wrap:balance;}
+
+/* ---------- Carte de l'offre : 3 chiffres clés ---------- */
+.pfe-stats.internship-stats{
+  grid-template-columns:repeat(3,1fr);
+}
+
+/* ---------- Deux offres complémentaires ---------- */
+.offers-compare .compare-col{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.offers-compare .compare-col h3{
+  margin:16px 0 0;
+  font-size:22px;
+}
+.offers-compare .compare-col p{
+  margin:12px 0 26px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  line-height:1.65;
+}
+.offers-compare .compare-col .btn{
+  margin-top:auto;
+  white-space:normal;
+  text-align:start;
+}
+.compare-col.is-current{
+  border-color:var(--line-bright);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(2,200,187,0.12), transparent 55%),
+    var(--bg-card);
+  box-shadow:var(--shadow-glow);
+}
+
+/* ---------- 9 domaines professionnels (grille 3 x 3) ---------- */
+.parcours-grid.internship-domains{
+  grid-template-columns:repeat(3,1fr);
+}
+.domains-note{
+  margin-top:24px;
+  text-align:center;
+  font-size:13px;
+  color:var(--ink-dim);
+}
+
+/* ---------- Bandeau CTA : deux boutons ---------- */
+.cta-strip .hero-ctas.cta-actions{
+  justify-content:center;
+  margin-top:26px;
+}
+.cta-strip .hero-ctas.cta-actions .btn{margin-top:0;}
+
+/* ---------- Formulaire : colonne formulaire + message de succès ---------- */
+.intern-form-col{min-width:0;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .parcours-grid.internship-domains{grid-template-columns:repeat(2,1fr);}
+  /* 9 cartes sur 2 colonnes : la dernière occupe toute la ligne */
+  .parcours-grid.internship-domains .track-card:last-child:nth-child(odd){grid-column:1 / -1;}
+}
+@media (max-width:520px){
+  .pfe-card .btn{white-space:normal;max-width:100%;text-align:center;}
+  .offers-compare .compare-col .btn{padding:13px 18px;font-size:14px;}
+  .pfe-stats.internship-stats{grid-template-columns:1fr;}
+  .parcours-grid.internship-domains{grid-template-columns:1fr;}
+}

@@ -1,0 +1,316 @@
+/* ============================================================
+   pfe-before-pfe.css
+   Ce fichier NE redéfinit AUCUN token (couleurs, polices, radius...).
+   Il réutilise les variables et classes de ../style.css
+   (.wrap, .eyebrow, .btn, .prog-card, .track-card, .mv-card, .tag,
+   .ring-ico, .cta-strip, .form-card, .field, .reveal, .journey-num, etc.)
+   et ajoute uniquement les composants propres à cette page.
+   ============================================================ */
+
+/* ---------- Page badge (indicateur "vous êtes ici") ---------- */
+.page-badge{
+  font-family:var(--mono);
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  color:var(--teal-bright);
+  background:rgba(2,200,187,0.12);
+  border:1px solid var(--line-bright);
+  padding:6px 12px;
+  border-radius:20px;
+  white-space:nowrap;
+}
+
+/* ---------- Hero compact, dédié au programme ---------- */
+.pfe-hero{
+  padding:150px 0 70px;
+}
+.pfe-hero .hero-lead{
+  max-width:640px;
+}
+
+/* ---------- PFE — grande card premium ---------- */
+.pfe-section{padding-top:60px;}
+.pfe-card{
+  position:relative;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(2,200,187,0.14), transparent 55%),
+    var(--bg-card);
+  border:1px solid var(--line-bright);
+  border-radius:24px;
+  padding:48px clamp(24px,5vw,56px);
+  box-shadow:var(--shadow-glow);
+  overflow:hidden;
+}
+.pfe-badge{
+  display:inline-flex;
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#031312;
+  background:var(--teal);
+  padding:7px 16px;
+  border-radius:20px;
+}
+.pfe-title{
+  margin-top:20px;
+  font-size:clamp(30px,4.5vw,46px);
+}
+.pfe-slogan{
+  margin-top:14px;
+  font-size:18px;
+  font-style:italic;
+  color:var(--teal-bright);
+  max-width:640px;
+  line-height:1.55;
+}
+.pfe-desc{
+  margin-top:14px;
+  font-size:16px;
+  color:var(--ink-soft);
+  max-width:680px;
+  line-height:1.7;
+}
+
+.pfe-stats{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+.pfe-stat{text-align:center;}
+.pfe-stat strong{
+  display:block;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(22px,2.6vw,30px);
+  color:var(--teal-bright);
+}
+.pfe-stat span{
+  display:block;
+  margin-top:6px;
+  font-size:12.5px;
+  color:var(--ink-soft);
+}
+
+.pfe-value-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.pfe-value-item{
+  background:var(--bg-card-hover);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px 18px;
+}
+.pfe-value-item .ring-ico{
+  width:44px;height:44px;
+  border-radius:50%;
+  border:2px solid var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.pfe-value-item h4{
+  font-family:var(--display);
+  font-size:16px;
+}
+.pfe-value-item p{
+  margin-top:8px;
+  font-size:13.5px;
+  color:var(--ink-soft);
+  line-height:1.55;
+}
+
+.pfe-card .btn{margin-top:38px;}
+
+/* ---------- Avant / Après ---------- */
+.compare-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.compare-col{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+}
+.compare-col h3{
+  font-size:18px;
+  margin-bottom:16px;
+}
+.compare-list li{
+  position:relative;
+  padding-inline-start:26px;
+  margin-bottom:12px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  line-height:1.5;
+}
+.compare-list li::before{
+  position:absolute;
+  inset-inline-start:0; top:0;
+  font-weight:700;
+}
+.compare-list.before li::before{content:"✕";color:#E6636E;}
+.compare-list.after li::before{content:"✓";color:var(--teal-bright);}
+
+/* ---------- Les 4 parcours ---------- */
+.parcours-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.parcours-grid .track-card{
+  padding:26px 22px;
+}
+.parcours-grid .track-card p.desc{
+  margin-bottom:14px;
+}
+
+/* ---------- Encadrement (4 mv-cards) ---------- */
+.encadrement-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+/* ---------- Déroulement : timeline étendue (9 étapes) ---------- */
+.pfe-steps{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px 20px;
+}
+.pfe-steps .journey-step p{padding:0;}
+
+.soutenance-highlight{
+  margin-top:56px;
+  background:linear-gradient(135deg, rgba(2,200,187,0.14), rgba(2,200,187,0.03));
+  border:1px solid var(--line-bright);
+  border-radius:var(--radius);
+  padding:34px clamp(20px,4vw,44px);
+  text-align:center;
+}
+.soutenance-highlight h3{
+  font-size:clamp(20px,3vw,28px);
+}
+.soutenance-highlight p{
+  margin-top:12px;
+  font-size:15px;
+  color:var(--ink-soft);
+  max-width:620px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.65;
+}
+
+/* ---------- Ce que tu vas développer ---------- */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
+}
+.skills-grid .benefit-card h4{font-size:14.5px;}
+
+/* ---------- Formulaire d'inscription ---------- */
+.field-error{
+  font-size:12px;
+  color:#E6636E;
+  min-height:16px;
+  margin-top:2px;
+}
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea{
+  border-color:#E6636E;
+}
+.field-checkbox{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:13.5px;
+  color:var(--ink-soft);
+  line-height:1.5;
+}
+.field-checkbox input{
+  margin-top:3px;
+  width:16px;height:16px;
+  accent-color:var(--teal);
+  flex-shrink:0;
+}
+.field.has-error .field-checkbox{
+  outline:1px solid #E6636E;
+  outline-offset:6px;
+  border-radius:8px;
+}
+.form-success{
+  display:none;
+  text-align:center;
+  padding:40px 20px;
+}
+.form-success.show{display:block;}
+.form-success .check-badge{
+  width:56px;height:56px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:var(--teal);
+  color:#031312;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;
+  font-weight:700;
+}
+.form-success h3{font-size:22px;}
+.form-success p{
+  margin-top:10px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  max-width:440px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.6;
+}
+.form-hint{
+  font-size:12px;
+  color:var(--ink-dim);
+  margin-top:4px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .pfe-stats{grid-template-columns:repeat(3,1fr);row-gap:20px;}
+  .pfe-value-grid{grid-template-columns:repeat(2,1fr);}
+  .compare-grid{grid-template-columns:1fr;}
+  .parcours-grid{grid-template-columns:repeat(2,1fr);}
+  .encadrement-grid{grid-template-columns:1fr 1fr;}
+  .pfe-steps{grid-template-columns:repeat(2,1fr);}
+  .skills-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media (max-width:720px){
+  .pfe-hero{padding-top:120px;}
+  .pfe-card{padding:32px 22px;border-radius:20px;}
+  .pfe-stats{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:520px){
+  .pfe-value-grid{grid-template-columns:1fr;}
+  .parcours-grid{grid-template-columns:1fr;}
+  .encadrement-grid{grid-template-columns:1fr;}
+  .pfe-steps{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:1fr 1fr;}
+  .pfe-stats{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:420px){
+  .skills-grid{grid-template-columns:1fr;}
+}
+
+/* Badge de page : masqué sur petit écran pour laisser la place au sélecteur de langue et au burger */
+@media (max-width:640px){
+  .nav-cta .page-badge{display:none;}
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="int.1">Stages PFE accompagnés | Codio Academy</title>
+<meta name="description" content="Stages PFE accompagnés par Codio Academy : un accompagnement technique, académique et méthodologique pour réaliser ton véritable projet de fin d'études, du cadrage à la soutenance." data-i18n-content="int.109">
+<meta property="og:title" content="Stages PFE accompagnés | Codio Academy">
+<meta property="og:description" content="Réalise ton véritable PFE avec un accompagnement technique, académique et méthodologique, du cadrage aux soutenances blanches.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+<!-- Composants partagés avec la page PFE (cartes, formulaire, timeline...) -->
+<link rel="stylesheet" href="../css/pfe-before-pfe.css">
+<link rel="stylesheet" href="../css/internship-2026.css">
+</head>
+<body>
+
+<!-- ============ NAV (réutilise le header du site) ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo"><span class="mark"></span>Codio Academy</a>
+    <div class="nav-links">
+      <a href="#offre" data-i18n="int.2">L'offre</a>
+      <a href="#domaines" data-i18n="int.3">Domaines</a>
+      <a href="#accompagnement" data-i18n="int.4">Accompagnement</a>
+      <a href="#etapes" data-i18n="int.5">Étapes</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+      <span class="page-badge" data-i18n="int.6">Stages PFE</span>
+      <a href="#candidature" class="btn btn-primary btn-sm" data-i18n="int.7">Je candidate</a>
+      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" data-i18n-aria="pfe.122">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Fermer le menu" data-i18n-aria="pfe.123">✕</button>
+  <a href="#offre" data-i18n="int.2">L'offre</a>
+  <a href="#domaines" data-i18n="int.3">Domaines</a>
+  <a href="#accompagnement" data-i18n="int.4">Accompagnement</a>
+  <a href="#etapes" data-i18n="int.5">Étapes</a>
+  <a href="#candidature" data-i18n="int.8">Candidature</a>
+  <a href="../index.html" data-i18n="int.9">Retour à l'accueil</a>
+</div>
+
+<!-- ============ HERO (compact) ============ -->
+<header class="hero pfe-hero" id="top">
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="int.10">Codio Academy · Stages PFE</span>
+    <h1 data-i18n="int.11">Ton vrai PFE, accompagné de bout en bout.</h1>
+    <p class="hero-lead" data-i18n="int.12">Tu réalises ton véritable projet de fin d'études ? Codio Academy t'accompagne sur le plan technique, académique et méthodologique, du cadrage du besoin jusqu'à la soutenance.</p>
+  </div>
+</header>
+
+<!-- ============ L'OFFRE ============ -->
+<section id="offre" class="pfe-section">
+  <div class="wrap">
+    <div class="pfe-card reveal">
+      <span class="pfe-badge" data-i18n="int.13">Nouvelle offre</span>
+      <h2 class="pfe-title" data-i18n="avail.c3title">Stages PFE accompagnés</h2>
+      <p class="pfe-slogan" data-i18n="int.14">« Un projet réel, un accompagnement réel. »</p>
+      <p class="pfe-desc" data-i18n="int.15">Une offre destinée aux étudiants qui réalisent leur véritable projet de fin d'études. Tu avances sur ton propre sujet, et Codio Academy t'accompagne à chaque étape : analyse du besoin, conception, réalisation, rapport et préparation de la soutenance.</p>
+
+      <div class="pfe-stats internship-stats">
+        <div class="pfe-stat"><strong>9</strong><span data-i18n="int.16">Domaines professionnels</span></div>
+        <div class="pfe-stat"><strong>2</strong><span data-i18n="int.17">Encadrements : technique et académique</span></div>
+        <div class="pfe-stat"><strong>5</strong><span data-i18n="int.18">Étapes accompagnées</span></div>
+      </div>
+
+      <div class="pfe-value-grid">
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/requirment.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="int.19">Cadrer</h4>
+          <p data-i18n="int.20">Analyse du besoin et définition claire du périmètre de ton projet.</p>
+        </div>
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/solution.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="int.21">Concevoir</h4>
+          <p data-i18n="int.22">Conception fonctionnelle et technique, et choix d'architecture.</p>
+        </div>
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/project-development.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="int.23">Réaliser</h4>
+          <p data-i18n="int.24">Suivi du développement et des tests tout au long de la réalisation.</p>
+        </div>
+        <div class="pfe-value-item">
+          <span class="ring-ico"><img src="../images/defend.png" alt="" loading="lazy"></span>
+          <h4 data-i18n="int.25">Soutenir</h4>
+          <p data-i18n="int.26">Rapport structuré, présentation finale et soutenances blanches.</p>
+        </div>
+      </div>
+
+      <a href="#candidature" class="btn btn-primary" data-i18n="int.27">Demander un accompagnement →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEUX OFFRES COMPLÉMENTAIRES ============ -->
+<section class="about" id="offres">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="int.28">Deux offres complémentaires</span>
+      <h2 data-i18n="int.29">Avant ou pendant ton PFE : choisis ton accompagnement.</h2>
+      <p data-i18n="int.30">Codio Academy propose deux offres distinctes, qui répondent à deux moments différents de ton parcours d'étudiant.</p>
+    </div>
+    <div class="compare-grid offers-compare">
+      <div class="compare-col reveal">
+        <span class="page-badge" data-i18n="int.31">Avant ton PFE</span>
+        <h3>PFE 9bal el PFE</h3>
+        <p data-i18n="int.32">Un programme de préparation : une expérience complète de projet informatique, avec formation, encadrement et soutenance blanche, pour aborder ton véritable PFE avec de l'expérience.</p>
+        <a href="pfe-before-pfe.html" class="btn btn-ghost" data-i18n="pfe.94">Découvrir PFE 9bal el PFE →</a>
+      </div>
+      <div class="compare-col is-current reveal">
+        <span class="page-badge" data-i18n="int.33">Pendant ton PFE</span>
+        <h3 data-i18n="avail.c3title">Stages PFE accompagnés</h3>
+        <p data-i18n="int.34">Un accompagnement sur ton véritable projet de fin d'études : cadrage, conception, réalisation, rapport et préparation de la soutenance. Il ne s'agit pas d'une formation préparatoire.</p>
+        <a href="#candidature" class="btn btn-primary" data-i18n="int.27">Demander un accompagnement →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOMAINES PROFESSIONNELS ============ -->
+<section id="domaines">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="int.35">9 domaines professionnels</span>
+      <h2 data-i18n="int.36">Un accompagnement dans le domaine de ton projet.</h2>
+      <p data-i18n="int.37">Choisis le domaine qui correspond au sujet de ton PFE : l'accompagnement technique se concentre sur les enjeux propres à ton projet.</p>
+    </div>
+    <div class="parcours-grid internship-domains">
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/full-stack-development.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="pfe.45">Développement Full Stack</h4>
+        <p class="desc" data-i18n="int.38">Conception et réalisation d'une application complète, du back-end jusqu'à l'interface utilisateur.</p>
+        <div class="prog-tags"><span>Front-end</span><span>Back-end</span><span>API</span><span data-i18n="int.39">Base de données</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/business-intelligence.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="pfe.47">Business Intelligence</h4>
+        <p class="desc" data-i18n="int.40">Modélisation des données, chaînes de traitement et tableaux de bord d'aide à la décision.</p>
+        <div class="prog-tags"><span data-i18n="int.41">Entrepôt de données</span><span>ETL</span><span>Dashboards</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/erp.png" alt="" loading="lazy"></span>
+        <h4>ERP</h4>
+        <p class="desc" data-i18n="int.42">Paramétrage, développement de modules et intégration d'un ERP autour d'un besoin métier.</p>
+        <div class="prog-tags"><span data-i18n="int.43">Modules</span><span data-i18n="int.44">Intégration</span><span data-i18n="int.45">Processus métier</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/game-development.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="pfe.51">3D / Jeux</h4>
+        <p class="desc" data-i18n="int.46">Conception et développement d'un jeu ou d'une expérience 3D interactive.</p>
+        <div class="prog-tags"><span>Game design</span><span>Gameplay</span><span data-i18n="int.47">Moteur 3D</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/virtual-reality.png" alt="" loading="lazy"></span>
+        <h4>VR</h4>
+        <p class="desc" data-i18n="int.48">Réalisation d'une expérience immersive en réalité virtuelle, du concept au prototype.</p>
+        <div class="prog-tags"><span data-i18n="int.49">Immersion</span><span data-i18n="int.50">Interactions</span><span data-i18n="int.51">Prototype</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/blender.png" alt="" loading="lazy"></span>
+        <h4><span dir="ltr">Blender / 3Ds Max</span></h4>
+        <p class="desc" data-i18n="int.52">Modélisation, texturing, animation et rendu d'éléments et de scènes 3D.</p>
+        <div class="prog-tags"><span data-i18n="int.53">Modélisation</span><span>Texturing</span><span data-i18n="int.54">Animation</span><span data-i18n="int.55">Rendu</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/ia-datascience.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="int.56">IA &amp; LLM</h4>
+        <p class="desc" data-i18n="int.57">Intégration de modèles d'IA et de grands modèles de langage dans une solution concrète.</p>
+        <div class="prog-tags"><span>LLM</span><span>RAG</span><span>Prompt engineering</span><span data-i18n="int.58">Évaluation</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/databases-ia.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="int.59">BigData &amp; Data Science</h4>
+        <p class="desc" data-i18n="int.60">Traitement de volumes de données importants, analyse et modèles prédictifs.</p>
+        <div class="prog-tags"><span data-i18n="int.61">Pipelines de données</span><span data-i18n="pfe.70">Analyse</span><span>Machine learning</span></div>
+      </div>
+      <div class="track-card reveal">
+        <span class="ring-ico"><img src="../images/integrations.png" alt="" loading="lazy"></span>
+        <h4 data-i18n="int.62">Automation</h4>
+        <p class="desc" data-i18n="int.63">Automatisation de processus et de tâches répétitives, de l'analyse du besoin jusqu'au déploiement.</p>
+        <div class="prog-tags"><span>Workflows</span><span>Scripts</span><span data-i18n="int.64">Intégration d'outils</span></div>
+      </div>
+    </div>
+    <p class="domains-note reveal" data-i18n="int.65">Les mots-clés ci-dessus sont indicatifs : les technologies retenues dépendent du sujet de ton PFE.</p>
+  </div>
+</section>
+
+<!-- ============ ACCOMPAGNEMENT ============ -->
+<section class="about" id="accompagnement">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="int.66">Un double encadrement</span>
+      <h2 data-i18n="int.67">Un accompagnement technique et académique.</h2>
+      <p data-i18n="int.68">Deux regards complémentaires sur ton projet : celui d'un professionnel du domaine et celui d'un encadrement méthodologique.</p>
+    </div>
+    <div class="encadrement-grid">
+      <div class="mv-card reveal">
+        <h3><span class="tag" data-i18n="int.69">Accompagnement technique et professionnel</span></h3>
+        <p data-i18n="int.70">Un appui sur les choix techniques de ton projet : architecture, bonnes pratiques de développement, Git, revue de code et résolution des blocages — avec les réflexes attendus sur un projet professionnel.</p>
+      </div>
+      <div class="mv-card reveal">
+        <h3><span class="tag" data-i18n="int.71">Encadrement académique et méthodologique</span></h3>
+        <p data-i18n="int.72">Un cadre pour structurer ton travail : démarche d'analyse, conception, organisation du projet et exigences académiques d'un PFE, en tenant compte des attentes de ton établissement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉTAPES ============ -->
+<section id="etapes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="int.73">Les étapes de ton PFE</span>
+      <h2 data-i18n="int.74">Accompagné à chaque étape, du cadrage à la soutenance.</h2>
+    </div>
+    <div class="journey-row">
+      <div class="journey-line" aria-hidden="true"></div>
+      <div class="journey-step reveal"><div class="journey-num">1</div><h4 data-i18n="int.75">Cadrage &amp; analyse</h4><p data-i18n="int.76">Comprendre le besoin, définir le périmètre et les objectifs du projet.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">2</div><h4 data-i18n="int.77">Conception &amp; architecture</h4><p data-i18n="int.78">Conception fonctionnelle et technique, architecture de la solution.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">3</div><h4 data-i18n="int.79">Réalisation &amp; tests</h4><p data-i18n="int.80">Suivi du développement et validation du projet par les tests.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">4</div><h4 data-i18n="int.81">Rapport de PFE</h4><p data-i18n="int.82">Structuration et rédaction du rapport de projet de fin d'études.</p></div>
+      <div class="journey-step reveal"><div class="journey-num">5</div><h4 data-i18n="int.83">Soutenance</h4><p data-i18n="int.84">Préparation de la présentation finale et soutenances blanches.</p></div>
+    </div>
+
+    <div class="soutenance-highlight reveal">
+      <h3 data-i18n="int.85">Prêt(e) avant le jour J.</h3>
+      <p data-i18n="int.86">Les soutenances blanches te permettent de présenter ton projet dans des conditions proches de la soutenance réelle, de recevoir des retours et d'identifier tes axes d'amélioration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-strip">
+  <div class="wrap">
+    <h2 data-i18n="int.87">Prêt à réaliser ton PFE avec un vrai accompagnement ?</h2>
+    <p data-i18n="int.88">Dis-nous dans quel domaine se situe ton projet et où il en est : notre équipe te recontactera.</p>
+    <div class="hero-ctas cta-actions">
+      <a href="#candidature" class="btn btn-primary" data-i18n="int.27">Demander un accompagnement →</a>
+      <a href="pfe-before-pfe.html" class="btn btn-ghost" data-i18n="int.89">Découvrir PFE 9bal el PFE</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CANDIDATURE (formulaire intégré) ============ -->
+<section id="candidature">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="int.8">Candidature</span>
+      <h2 data-i18n="int.90">Demander un accompagnement</h2>
+      <p data-i18n="int.91">Remplis le formulaire : notre équipe te contactera pour échanger sur ton projet.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="intern-form-col">
+        <form class="form-card reveal" id="internForm" action="https://formsubmit.co/codioacademy@outlook.com" method="POST" novalidate>
+
+          <!-- Configuration FormSubmit (même destinataire que les autres formulaires du site) -->
+          <input type="hidden" name="_subject" id="internSubject" value="Demande d'accompagnement — Stage PFE accompagné">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+
+          <p class="section-head" style="margin-bottom:20px;"><strong style="font-size:15px;color:var(--ink);" data-i18n="pfe.97">Informations personnelles</strong></p>
+          <div class="form-row">
+            <div class="field">
+              <label for="internLastName" data-i18n="pfe.98">Nom</label>
+              <input id="internLastName" name="Nom" type="text" placeholder="Nom" data-i18n-ph="pfe.98">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="internFirstName" data-i18n="pfe.99">Prénom</label>
+              <input id="internFirstName" name="Prénom" type="text" placeholder="Prénom" data-i18n-ph="pfe.99">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="internEmail" data-i18n="contact.f5">Email</label>
+              <input id="internEmail" name="Email" type="email" placeholder="vous@email.com" data-i18n-ph="contact.f5ph">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="internPhone" data-i18n="contact.f6">Téléphone</label>
+              <input id="internPhone" name="Téléphone" type="tel" dir="ltr" placeholder="+216 xx xxx xxx">
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <p class="section-head" style="margin:28px 0 20px;"><strong style="font-size:15px;color:var(--ink);" data-i18n="pfe.100">Informations académiques</strong></p>
+          <div class="form-row">
+            <div class="field">
+              <label for="internSchool" data-i18n="pfe.101">Université / établissement</label>
+              <input id="internSchool" name="Université" type="text" placeholder="Nom de l'établissement" data-i18n-ph="pfe.124">
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="internSpeciality" data-i18n="pfe.102">Spécialité</label>
+              <input id="internSpeciality" name="Spécialité" type="text" placeholder="Ex : Génie Logiciel" data-i18n-ph="pfe.125">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full">
+              <label for="internStudyLevel" data-i18n="pfe.103">Niveau d'études</label>
+              <input id="internStudyLevel" name="Niveau_etudes" type="text" placeholder="Ex : Master 2, Cycle ingénieur 3..." data-i18n-ph="int.110">
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <p class="section-head" style="margin:28px 0 20px;"><strong style="font-size:15px;color:var(--ink);" data-i18n="int.92">Ton projet de fin d'études</strong></p>
+          <div class="form-row">
+            <div class="field">
+              <label for="internDomain" data-i18n="int.93">Domaine du projet</label>
+              <select id="internDomain" name="Domaine_du_projet">
+                <option value="" disabled selected data-i18n="int.94">Choisir un domaine</option>
+                <option value="Développement Full Stack" data-i18n="pfe.45">Développement Full Stack</option>
+                <option value="Business Intelligence" data-i18n="pfe.47">Business Intelligence</option>
+                <option value="ERP">ERP</option>
+                <option value="3D / Jeux" data-i18n="pfe.51">3D / Jeux</option>
+                <option value="VR">VR</option>
+                <option value="Blender / 3Ds Max">Blender / 3Ds Max</option>
+                <option value="IA & LLM" data-i18n="int.56">IA &amp; LLM</option>
+                <option value="BigData & Data Science" data-i18n="int.59">BigData &amp; Data Science</option>
+                <option value="Automation" data-i18n="int.62">Automation</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="internStatus" data-i18n="int.95">Où en est ton PFE ?</label>
+              <select id="internStatus" name="Avancement_PFE">
+                <option value="" disabled selected data-i18n="int.96">Choisir une situation</option>
+                <option value="Sujet pas encore défini" data-i18n="int.97">Mon sujet n'est pas encore défini</option>
+                <option value="Sujet défini, PFE pas commencé" data-i18n="int.98">Mon sujet est défini, je n'ai pas encore commencé</option>
+                <option value="PFE en cours" data-i18n="int.99">Mon PFE est déjà en cours</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full">
+              <label for="internSubjectTitle" data-i18n="int.100">Sujet de ton PFE (si déjà défini)</label>
+              <input id="internSubjectTitle" name="Sujet_PFE" type="text" placeholder="Intitulé ou description courte du sujet" data-i18n-ph="int.111">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full">
+              <label for="internMessage" data-i18n="int.101">Tes besoins d'accompagnement (optionnel)</label>
+              <textarea id="internMessage" name="Besoins_accompagnement" rows="3" placeholder="Ex : conception, développement, rapport, soutenance..." data-i18n-ph="int.112"></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row" style="margin-bottom:6px;">
+            <div class="field full">
+              <div class="field-checkbox">
+                <input id="internConsent" name="Consentement" type="checkbox" value="J'accepte d'être contacté">
+                <label for="internConsent" style="text-transform:none;letter-spacing:0;font-family:var(--body);font-size:13.5px;" data-i18n="int.102">J'accepte d'être contacté par Codio Academy concernant cette offre.</label>
+              </div>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-i18n="int.103">Envoyer ma demande</button>
+          <p class="form-note" data-i18n="int.104">Ta demande est envoyée directement à notre équipe.</p>
+        </form>
+
+        <!-- Feedback affiché après envoi réussi -->
+        <div class="form-card form-success" id="internSuccess">
+          <span class="check-badge">✓</span>
+          <h3 data-i18n="int.105">Merci pour ta demande !</h3>
+          <p data-i18n="int.106">Ta demande a bien été envoyée à l'équipe Codio Academy, qui te contactera prochainement.</p>
+        </div>
+      </div>
+
+      <div class="contact-info reveal">
+        <div class="info-block">
+          <h3 data-i18n="contact.getInTouch">Nous contacter</h3>
+          <div class="info-item"><span class="ring-ico"><img src="../images/location.png" alt="" loading="lazy"></span><div><strong data-i18n="pfe.117">Studio</strong><span data-i18n="contact.locV">Novation City, Sousse, Tunisie — visites sur rendez-vous</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="../images/email.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.f5">Email</strong><span>codioacademy@outlook.com</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="../images/phone-call.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.f6">Téléphone</strong><span dir="ltr">+216 28 80 29 29</span></div></div>
+          <div class="info-item"><span class="ring-ico"><img src="../images/working-time.png" alt="" loading="lazy"></span><div><strong data-i18n="contact.hours">Horaires</strong><span data-i18n="contact.hoursV">Lun–Sam, 9h–18h</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (réutilise le footer du site) ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo"><span class="mark"></span>Codio Academy</a>
+        <p data-i18n="footer.tagline">Un studio d'apprentissage pratique pour les 6–25 ans et plus, qui développe des compétences techniques, créatives et entrepreneuriales par de vrais projets.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.explore">Explorer</h4>
+        <a href="../index.html#about" data-i18n="nav.about">À&nbsp;propos</a>
+        <a href="../index.html#programs" data-i18n="nav.programs">Programmes</a>
+        <a href="../index.html#tracks" data-i18n="nav.tracks">Filières</a>
+        <a href="../index.html#journey" data-i18n="nav.journey">Parcours</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="int.107">Nos offres PFE</h4>
+        <a href="#top" data-i18n="avail.c3title">Stages PFE accompagnés</a>
+        <a href="pfe-before-pfe.html">PFE 9bal el PFE</a>
+        <a href="#domaines" data-i18n="int.108">Les 9 domaines</a>
+        <a href="#candidature" data-i18n="int.8">Candidature</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.contact">Contact</h4>
+        <a href="#candidature" data-i18n="int.90">Demander un accompagnement</a>
+        <span>codioacademy@outlook.com</span>
+        <span dir="ltr">+216 28 80 29 29</span>
+        <span data-i18n="footer.location">Novation City, Sousse, Tunisie</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Codio Academy. Tous droits réservés.</span>
+      <span data-i18n="footer.built">Construit avec curiosité, code, et un peu d'ambition.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/i18n-home.js"></script>
+<script src="../js/i18n-pages.js"></script>
+<script src="../js/internship-2026.js"></script>
+</body>
+</html>

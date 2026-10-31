@@ -1,0 +1,393 @@
+/* ============================================================
+   programming-for-kids.css — page Codio Kids
+   Ne redéfinit AUCUN token. S'appuie sur ../css/style.css et sur les
+   composants de ../css/pfe-before-pfe.css (pfe-card, pfe-stats, mv-card,
+   skills-grid, journey-row, parcours-grid, soutenance-highlight, form...)
+   et n'ajoute que ce qui est propre à cette page.
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.kids-hero h1,
+.section-head h2,
+.cta-strip h2{text-wrap:balance;}
+.kids-hero .hero-ctas{margin-top:30px;}
+.kids-hero .hero-meta{margin-top:34px;gap:14px 30px;}
+
+/* ---------- Compétences : 6 cartes sur 3 colonnes ---------- */
+.skills-grid.kids-skills{grid-template-columns:repeat(3,1fr);}
+
+/* ---------- Onglets des 4 groupes ----------
+   Sans JavaScript : pas d'onglets, les 4 programmes s'affichent à la suite.
+   Le JS ajoute la classe .kids-js sur <html> et active les onglets. */
+.group-tabs{display:none;}
+.kids-js .group-tabs{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin:6px 0 30px;
+}
+.group-tab{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px 10px;
+  color:var(--ink-soft);
+  font-family:inherit;
+  text-align:center;
+  cursor:pointer;
+  transition:background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.group-tab strong{
+  display:block;
+  font-family:var(--display);
+  font-size:20px;
+  color:var(--ink);
+}
+.group-tab span{
+  display:block;
+  margin-top:2px;
+  font-family:var(--mono);
+  font-size:12.5px;
+  font-weight:700;
+}
+.group-tab small{
+  display:block;
+  margin-top:4px;
+  font-size:12.5px;
+  color:var(--ink-dim);
+}
+.group-tab:hover{border-color:var(--teal);transform:translateY(-2px);}
+.group-tab:focus-visible{outline:2px solid var(--teal-bright);outline-offset:3px;}
+.group-tab[aria-selected="true"]{
+  background:var(--teal);
+  border-color:var(--teal);
+  color:#031312;
+}
+.group-tab[aria-selected="true"] strong,
+.group-tab[aria-selected="true"] small{color:#031312;}
+
+.week-panel{margin-top:8px;}
+.week-panel + .week-panel{margin-top:56px;}   /* cas sans JS : panneaux empilés */
+.kids-js .week-panel{margin-top:0;}
+.week-panel[hidden]{display:none;}
+.week-panel:focus-visible{outline:2px solid var(--teal-bright);outline-offset:6px;border-radius:12px;}
+.kids-js .week-panel:not([hidden]){animation:kidsFade 0.35s ease;}
+@keyframes kidsFade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+
+/* En-tête de groupe */
+.group-head{
+  background:
+    radial-gradient(circle at 100% 0%, rgba(2,200,187,0.12), transparent 55%),
+    var(--bg-card);
+  border:1px solid var(--line-bright);
+  border-radius:var(--radius);
+  padding:26px clamp(18px,3vw,32px);
+  margin-bottom:22px;
+}
+.group-head h3{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  font-size:clamp(20px,2.6vw,26px);
+}
+.group-meta{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.group-meta span{
+  display:block;
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--teal-bright);
+}
+.group-meta strong{
+  display:block;
+  margin-top:6px;
+  font-size:14.5px;
+  line-height:1.45;
+  color:var(--ink);
+}
+.group-meta em{
+  display:block;
+  margin-top:3px;
+  font-style:normal;
+  font-size:12.5px;
+  color:var(--ink-soft);
+}
+
+/* Fiches semaine */
+.weeks-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.week-card{
+  position:relative;
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px 20px 22px;
+  transition:border-color 0.2s ease, transform 0.2s ease;
+}
+.week-card:hover{border-color:var(--line-bright);transform:translateY(-2px);}
+.week-num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:38px;height:28px;
+  padding:0 10px;
+  border-radius:20px;
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:700;
+  color:var(--teal-bright);
+  background:rgba(2,200,187,0.12);
+  border:1px solid var(--line-bright);
+}
+.week-card h4{
+  margin-top:12px;
+  font-size:16px;
+  line-height:1.3;
+}
+.week-card p{
+  margin-top:8px;
+  font-size:13.5px;
+  line-height:1.6;
+  color:var(--ink-soft);
+}
+.week-card.is-final{
+  border-color:var(--line-bright);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(2,200,187,0.16), transparent 60%),
+    var(--bg-card);
+}
+.week-card.is-final .week-num{background:var(--teal);color:#031312;border-color:var(--teal);}
+.week-flag{
+  position:absolute;
+  top:20px;inset-inline-end:18px;
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--teal-bright);
+}
+
+/* ---------- Méthode ---------- */
+/* Titre « Learn → Practice → Create → Present » : TOUJOURS sur une seule ligne.
+   Le texte mesure ≈ 18 em de large ; la taille de police suit la largeur disponible
+   (viewport − marges de 2×24px, divisé par 19,5 pour garder une marge de sécurité),
+   plafonnée à 44px sur grand écran. Aucun retour à la ligne, aucun débordement. */
+#methode .section-head{max-width:none;}
+.section-head .method-title{
+  white-space:nowrap;
+  font-size:min(44px, calc((100vw - 48px) / 19.5));
+  text-wrap:nowrap;
+}
+.method-title span{display:inline-block;}
+.journey-step .step-time{
+  margin-top:6px;
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:700;
+  color:var(--teal-bright);
+}
+.method-note{
+  margin-top:20px;
+  text-align:center;
+  font-size:12.5px;
+  color:var(--ink-dim);
+}
+.split-card{
+  margin-top:44px;
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px clamp(18px,3vw,32px);
+}
+.split-card h3{font-size:18px;}
+.split-bar{
+  margin-top:18px;
+  display:flex;
+  gap:4px;
+  height:44px;
+}
+.split-bar span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  font-family:var(--mono);
+  font-size:13px;
+  font-weight:700;
+  color:#031312;
+}
+.split-bar span:first-child,.split-legend li:first-child i{border-start-start-radius:10px;border-end-start-radius:10px;}
+.split-bar span:last-child{border-start-end-radius:10px;border-end-end-radius:10px;}
+.split-bar .s1,.split-legend i.s1{background:rgba(2,200,187,0.35);}
+.split-bar .s2,.split-legend i.s2{background:rgba(2,200,187,0.58);}
+.split-bar .s1,.split-bar .s2{color:var(--ink);}
+.split-bar .s3,.split-legend i.s3{background:var(--teal);}
+.split-bar .s4,.split-legend i.s4{background:var(--teal-bright);}
+.split-legend{
+  margin-top:16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 26px;
+}
+.split-legend li{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--ink-soft);}
+.split-legend i{display:inline-block;width:14px;height:14px;border-radius:4px;}
+.split-legend strong{font-weight:600;color:var(--ink-soft);}
+
+/* ---------- Projets ---------- */
+.final-project{
+  margin-top:56px;
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:30px clamp(18px,3vw,34px);
+}
+.final-project h3{font-size:20px;}
+.final-steps{
+  list-style:none;
+  padding:0;
+  margin-top:22px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  counter-reset:fs;
+}
+.final-steps li{
+  counter-increment:fs;
+  background:var(--bg-card-hover);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px 16px 18px;
+}
+.final-steps li::before{
+  content:counter(fs);
+  display:flex;align-items:center;justify-content:center;
+  width:30px;height:30px;
+  border-radius:50%;
+  border:2px solid var(--line-bright);
+  font-family:var(--display);
+  font-weight:700;
+  font-size:14px;
+  color:var(--teal-bright);
+  margin-bottom:12px;
+}
+.final-steps strong{display:block;font-size:14.5px;}
+.final-steps span{display:block;margin-top:6px;font-size:13px;line-height:1.55;color:var(--ink-soft);}
+
+.badges-block{margin-top:56px;}
+.badges-block h3{font-size:20px;margin-bottom:20px;}
+.badge-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.badge-item{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px 16px 18px;
+}
+.badge-item span{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;
+  border-radius:50%;
+  background:rgba(2,200,187,0.14);
+  color:var(--teal-bright);
+  font-size:15px;
+  margin-bottom:10px;
+}
+.badge-item strong{display:block;font-family:var(--display);font-size:15px;}
+.badge-item em{display:block;margin-top:5px;font-style:normal;font-size:12.5px;line-height:1.5;color:var(--ink-soft);}
+
+/* ---------- Informations pratiques ---------- */
+.kids-info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.kids-info-grid .mv-card .ring-ico{
+  width:44px;height:44px;
+  border-radius:50%;
+  border:2px solid var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.kids-info-grid .mv-card .ring-ico img{width:24px;height:24px;object-fit:contain;}
+
+.eval-card{
+  margin-top:40px;
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:30px clamp(18px,3vw,34px);
+}
+.eval-card h3{font-size:20px;}
+.eval-grid{
+  margin-top:22px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px 36px;
+}
+.eval-label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
+.eval-label strong{font-size:14.5px;}
+.eval-label span{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--teal-bright);}
+.eval-bar{margin-top:8px;height:8px;border-radius:8px;background:var(--bg-card-hover);overflow:hidden;}
+.eval-bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--teal),var(--teal-bright));}
+.eval-row p{margin-top:8px;font-size:13px;line-height:1.55;color:var(--ink-soft);}
+
+/* ---------- CTA et formulaire ---------- */
+.cta-strip .hero-ctas.cta-actions{justify-content:center;margin-top:26px;}
+.cta-strip .hero-ctas.cta-actions .btn{margin-top:0;}
+.kids-form-col{min-width:0;}
+.field .form-hint{display:block;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:720px){
+  /* 5 chiffres clés sur 2 colonnes : le dernier occupe toute la ligne */
+  .pfe-stats .pfe-stat:last-child:nth-child(odd){grid-column:1 / -1;}
+}
+@media (max-width:980px){
+  .weeks-grid{grid-template-columns:repeat(2,1fr);}
+  .group-meta{grid-template-columns:repeat(2,1fr);}
+  .final-steps{grid-template-columns:repeat(2,1fr);}
+  .final-steps li:last-child:nth-child(odd){grid-column:1 / -1;}
+  .badge-grid{grid-template-columns:repeat(2,1fr);}
+  .kids-info-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:720px){
+  .eval-grid{grid-template-columns:1fr;}
+}
+@media (max-width:520px){
+  .kids-hero .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;}
+  .kids-js .group-tabs{gap:8px;}
+  .group-tab{padding:12px 4px;border-radius:14px;}
+  .group-tab strong{font-size:17px;}
+  .group-tab span{font-size:11px;}
+  .group-tab small{display:none;}
+  .weeks-grid{grid-template-columns:1fr;}
+  .group-meta{grid-template-columns:1fr;gap:14px;}
+  .skills-grid.kids-skills{grid-template-columns:1fr 1fr;}
+  .final-steps{grid-template-columns:1fr;}
+  .badge-grid{grid-template-columns:1fr;}
+  .kids-info-grid{grid-template-columns:1fr;}
+  .split-bar{height:38px;}
+  .split-bar span{font-size:11px;}
+}
+@media (max-width:420px){
+  .skills-grid.kids-skills{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion: reduce){
+  .kids-js .week-panel:not([hidden]){animation:none;}
+  .week-card:hover,.group-tab:hover{transform:none;}
+}
