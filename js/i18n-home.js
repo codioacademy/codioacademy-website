@@ -269,11 +269,11 @@ const I18N = {
     "testi.eyebrow": "شهادات الطلاب وأولياء الأمور", "testi.h2": "لا تأخذوا كلامنا فقط",
     "testi.p": "آراء حقيقية من عائلات شاهدت أبناءها يتحولون من فضوليين إلى قادرين.",
     "testi.q1": "بنت ابنتي أول روبوت لها في عمر 9 سنوات ولم تتوقف عن الحديث عنه منذ ذلك الحين. المرشدون يستمعون فعلًا لأفكار الأطفال بدلًا من اتباع نص جاهز.",
-    "testi.p1n": "كوديو أكاديمي", "testi.p1r": "بعض أطفالنا الأبطال",
+    "testi.p1n": "السيدة رشيدة", "testi.p1r": "ولية أمر, المبتكرون الصغار",
     "testi.q2": "دخلت بدون أي معرفة بتطوير الألعاب وخرجت بلعبة قابلة للّعب وثقة لأقول إنني مطوّر. كانت السرعة مناسبة تمامًا لعمري.",
     "testi.p2n": "السيدة هاجر", "testi.p2r": "ولية أمر, المبتكرون الصغار",
     "testi.q3": "المسار المهني أعطاني مهارات حقيقية في ERP وقواعد البيانات، بالإضافة إلى المهارات الناعمة للعرض دون توتر. استخدمت ما تعلمته في أول مقابلة تدريب لي.",
-    "testi.p3n": "السيدة رشيدة", "testi.p3r": "ولية أمر, المبتكرون الصغار",
+    "testi.p3n": "كوديو أكاديمي", "testi.p3r": "طلاب, المبتكرون الصغار",
     "ctaStrip.h2": "مستعد لترى ما يمكنك بناؤه؟", "ctaStrip.p": "المقاعد متاحة الآن للدورة القادمة — لكل الأعمار، كل المسارات.", "ctaStrip.cta": "احجز مقعدك ←",
     "contact.eyebrow": "سجّل الآن", "contact.h2": "لنبنِ مشروعك القادم",
     "contact.p": "حدّثنا قليلًا عن نفسك (أو طفلك) وسنوجهك إلى المسار والفئة العمرية المناسبة خلال 24 ساعة.",
@@ -306,6 +306,9 @@ const I18N = {
 
 /* Compléments : métadonnées de la page et libellés d'accessibilité */
 Object.assign(I18N.fr, {
+  "testi.p4n": "Stages chez Codio Academy", "testi.p4r": "Des étudiants qui effectuent leur stage chez nous",
+  "testi.soon": "Vidéo bientôt disponible",
+  "testi.v1": "Témoignage vidéo — Mme Rachida", "testi.v2": "Témoignage vidéo — Mme Hajer", "testi.v3": "Témoignage vidéo — Codio Academy", "testi.v4": "Vidéo — Stages chez Codio Academy",
   "meta.title": "Codio Academy — Apprendre. Coder. Innover.",
   "meta.desc": "Codio Academy: votre avenir IT commence ici. Coding, apprentissage intelligent, jeux vidéo, dev web/mobile, ERP, IA, soft skills — pour enfants, ados et jeunes adultes.",
   "nav.openMenu": "Ouvrir le menu", "nav.closeMenu": "Fermer le menu",
@@ -313,6 +316,9 @@ Object.assign(I18N.fr, {
   "spot.pause": "Mettre le défilement en pause", "spot.play": "Reprendre le défilement", "spot.goto": "Afficher : {t}"
 });
 Object.assign(I18N.en, {
+  "testi.p4n": "Internships at Codio Academy", "testi.p4r": "Students doing their internship with us",
+  "testi.soon": "Video coming soon",
+  "testi.v1": "Video testimonial — Mme Rachida", "testi.v2": "Video testimonial — Mme Hajer", "testi.v3": "Video testimonial — Codio Academy", "testi.v4": "Video — Internships at Codio Academy",
   "meta.title": "Codio Academy — Learn. Code. Innovate.",
   "meta.desc": "Codio Academy: your IT future starts here. Coding, smart learning, video games, web/mobile dev, ERP, AI, soft skills — for kids, teens and young adults.",
   "nav.openMenu": "Open menu", "nav.closeMenu": "Close menu",
@@ -320,6 +326,9 @@ Object.assign(I18N.en, {
   "spot.pause": "Pause the slideshow", "spot.play": "Resume the slideshow", "spot.goto": "Show: {t}"
 });
 Object.assign(I18N.ar, {
+  "testi.p4n": "تربّصات في كوديو أكاديمي", "testi.p4r": "طلبة يجرون تربّصهم لدينا",
+  "testi.soon": "الفيديو قريبًا",
+  "testi.v1": "شهادة مصوّرة — السيدة رشيدة", "testi.v2": "شهادة مصوّرة — السيدة هاجر", "testi.v3": "شهادة مصوّرة — كوديو أكاديمي", "testi.v4": "فيديو — تربّصات في كوديو أكاديمي",
   "meta.title": "كوديو أكاديمي — تعلّم. برمج. ابتكر.",
   "meta.desc": "كوديو أكاديمي: مستقبلك في عالم تكنولوجيا المعلومات يبدأ هنا. البرمجة، التعلّم الذكي، ألعاب الفيديو، تطوير الويب والموبايل، ERP، الذكاء الاصطناعي، المهارات الشخصية — للأطفال والمراهقين والشباب.",
   "nav.openMenu": "فتح القائمة", "nav.closeMenu": "إغلاق القائمة",

@@ -268,12 +268,12 @@
       <h2 data-i18n="testi.h2">Don't take our word for it</h2>
       <p data-i18n="testi.p">Real feedback from families who've watched their kids go from curious to capable.</p>
     </div>
+    <!-- VIDÉOS (YouTube). Format du cadre : portrait 6/9 par défaut. Pour une vidéo horizontale, ajoutez
+         style="--ratio:16/9" sur le <div class="testi-video-wrap"> concerné. -->
     <div class="testi-row">
       <div class="testi-card reveal">
         <div class="testi-video-wrap">
-          <video class="testi-video" controls preload="metadata" playsinline>
-            <source src="videos/story1.mov" type="video/mp4">
-          </video>
+          <iframe class="testi-video" src="https://www.youtube.com/embed/RSAwCSNh4yQ?rel=0&amp;modestbranding=1&amp;playsinline=1" data-i18n-aria="testi.v1" aria-label="Témoignage vidéo — Mme Rachida" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="testi-person">
           <div class="testi-avatar">R</div>
@@ -282,9 +282,7 @@
       </div>
       <div class="testi-card reveal">
         <div class="testi-video-wrap">
-          <video class="testi-video" controls preload="metadata" playsinline>
-            <source src="videos/story2.mov" type="video/mp4">
-          </video>
+          <iframe class="testi-video" src="https://www.youtube.com/embed/DxRDAI7qWG0?rel=0&amp;modestbranding=1&amp;playsinline=1" data-i18n-aria="testi.v2" aria-label="Témoignage vidéo — Mme Hajer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="testi-person">
           <div class="testi-avatar">H</div>
@@ -293,13 +291,28 @@
       </div>
       <div class="testi-card reveal">
         <div class="testi-video-wrap">
-          <video class="testi-video" controls preload="metadata" playsinline>
-            <source src="videos/story3.mov" type="video/mp4">
-          </video>
+          <iframe class="testi-video" src="https://www.youtube.com/embed/fKvIqZs3ayQ?rel=0&amp;modestbranding=1&amp;playsinline=1" data-i18n-aria="testi.v3" aria-label="Témoignage vidéo — Codio Academy" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="testi-person">
           <div class="testi-avatar">C</div>
           <div><strong data-i18n="testi.p3n">Codio Academy</strong><span data-i18n="testi.p3r">Students, Young Explorers track</span></div>
+        </div>
+      </div>
+      <!-- ================= VIDÉO 4 : stagiaires chez Codio Academy =================
+           ► POUR AJOUTER LA VIDÉO : collez simplement le lien YouTube entre les guillemets de l'attribut data-youtube de la ligne ci-dessous.
+             Tous les formats sont acceptés : https://www.youtube.com/watch?v=XXXXXXXXXXX , https://youtu.be/XXXXXXXXXXX ,
+             https://www.youtube.com/embed/XXXXXXXXXXX , https://www.youtube.com/shorts/XXXXXXXXXXX ou l'identifiant seul.
+             Tant que data-youtube est vide, la carte affiche « Vidéo bientôt disponible ». Rien d'autre à modifier. -->
+      <div class="testi-card reveal">
+        <div class="testi-video-wrap" data-youtube="">
+          <div class="testi-soon">
+            <span class="testi-soon-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg></span>
+            <span data-i18n="testi.soon">Vidéo bientôt disponible</span>
+          </div>
+        </div>
+        <div class="testi-person">
+          <div class="testi-avatar">S</div>
+          <div><strong data-i18n="testi.p4n">Stages chez Codio Academy</strong><span data-i18n="testi.p4r">Des étudiants qui effectuent leur stage chez nous</span></div>
         </div>
       </div>
     </div>

@@ -1,3 +1,33 @@
+/* ============ Vidéos YouTube « à renseigner » ============
+   Un conteneur .testi-video-wrap[data-youtube] dont l'attribut contient un lien (ou un identifiant)
+   YouTube reçoit automatiquement son lecteur. Vide = le message « Vidéo bientôt disponible » reste affiché.
+   Exécuté AVANT l'initialisation de la traduction pour que l'aria-label du lecteur soit traduit. */
+(function () {
+  function toEmbed(v) {
+    v = (v || '').trim();
+    if (!v) return '';
+    const m = v.match(/(?:embed\/|youtu\.be\/|shorts\/|live\/|[?&]v=)([A-Za-z0-9_-]{11})/);
+    const id = m ? m[1] : (/^[A-Za-z0-9_-]{11}$/.test(v) ? v : '');
+    return id ? 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&playsinline=1' : '';
+  }
+  document.querySelectorAll('.testi-video-wrap[data-youtube]').forEach(function (wrap) {
+    const src = toEmbed(wrap.getAttribute('data-youtube'));
+    if (!src) return;
+    const f = document.createElement('iframe');
+    f.className = 'testi-video';
+    f.src = src;
+    f.loading = 'lazy';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allowFullscreen = true;
+    f.setAttribute('data-i18n-aria', 'testi.v4');
+    f.setAttribute('aria-label', 'Vidéo — Stages chez Codio Academy');
+    const soon = wrap.querySelector('.testi-soon');
+    if (soon) soon.remove();
+    wrap.appendChild(f);
+  });
+})();
+
 /* Traduction : moteur partagé js/i18n.js + dictionnaire js/i18n-home.js (chargés avant ce fichier). */
 CodioI18n.init();
 
