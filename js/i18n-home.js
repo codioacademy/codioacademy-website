@@ -308,17 +308,23 @@ const I18N = {
 Object.assign(I18N.fr, {
   "meta.title": "Codio Academy — Apprendre. Coder. Innover.",
   "meta.desc": "Codio Academy: votre avenir IT commence ici. Coding, apprentissage intelligent, jeux vidéo, dev web/mobile, ERP, IA, soft skills — pour enfants, ados et jeunes adultes.",
-  "nav.openMenu": "Ouvrir le menu", "nav.closeMenu": "Fermer le menu"
+  "nav.openMenu": "Ouvrir le menu", "nav.closeMenu": "Fermer le menu",
+  "spot.region": "Nouveaux programmes à la une", "spot.prev": "Programme précédent", "spot.next": "Programme suivant",
+  "spot.pause": "Mettre le défilement en pause", "spot.play": "Reprendre le défilement", "spot.goto": "Afficher : {t}"
 });
 Object.assign(I18N.en, {
   "meta.title": "Codio Academy — Learn. Code. Innovate.",
   "meta.desc": "Codio Academy: your IT future starts here. Coding, smart learning, video games, web/mobile dev, ERP, AI, soft skills — for kids, teens and young adults.",
-  "nav.openMenu": "Open menu", "nav.closeMenu": "Close menu"
+  "nav.openMenu": "Open menu", "nav.closeMenu": "Close menu",
+  "spot.region": "Featured new programs", "spot.prev": "Previous program", "spot.next": "Next program",
+  "spot.pause": "Pause the slideshow", "spot.play": "Resume the slideshow", "spot.goto": "Show: {t}"
 });
 Object.assign(I18N.ar, {
   "meta.title": "كوديو أكاديمي — تعلّم. برمج. ابتكر.",
   "meta.desc": "كوديو أكاديمي: مستقبلك في عالم تكنولوجيا المعلومات يبدأ هنا. البرمجة، التعلّم الذكي، ألعاب الفيديو، تطوير الويب والموبايل، ERP، الذكاء الاصطناعي، المهارات الشخصية — للأطفال والمراهقين والشباب.",
-  "nav.openMenu": "فتح القائمة", "nav.closeMenu": "إغلاق القائمة"
+  "nav.openMenu": "فتح القائمة", "nav.closeMenu": "إغلاق القائمة",
+  "spot.region": "البرامج الجديدة المميّزة", "spot.prev": "البرنامج السابق", "spot.next": "البرنامج التالي",
+  "spot.pause": "إيقاف التمرير مؤقتًا", "spot.play": "متابعة التمرير", "spot.goto": "عرض: {t}"
 });
 
 /* Enregistre le dictionnaire auprès du moteur partagé (i18n.js) */

@@ -1166,6 +1166,143 @@ html[dir="rtl"] .drawer-close{right:auto;left:24px;}
 }
 .scrim.show{opacity:1;pointer-events:auto;}
 
+/* ============ SPOTLIGHT — bandeau « À la une » (haut de l'accueil) ============
+   Alimenté par script.js à partir des cartes de la section Nouveautés. */
+.hero.has-spotlight{padding-top:100px;}
+.spotlight{position:relative;z-index:2;margin-bottom:40px;}
+.spotlight[hidden]{display:none;}
+.spot-shell{
+  position:relative;overflow:hidden;
+  padding:20px clamp(18px,3vw,30px) 0;
+  border:1px solid var(--line-bright);
+  border-radius:24px;
+  background:
+    radial-gradient(560px 240px at 100% 0%, rgba(2,200,187,0.20), transparent 70%),
+    radial-gradient(440px 220px at 0% 100%, rgba(2,200,187,0.09), transparent 70%),
+    linear-gradient(180deg, rgba(21,23,26,0.86), rgba(10,11,12,0.94));
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:var(--shadow-glow), var(--shadow-pop);
+}
+.spot-shell::before{
+  content:"";position:absolute;top:0;left:12%;right:12%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--teal-bright),transparent);
+  opacity:0.85;
+}
+.spot-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
+.spot-top-l{display:flex;align-items:center;gap:12px;min-width:0;}
+.spot-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:6px 13px;border-radius:999px;
+  border:1px solid var(--line-bright);background:rgba(2,200,187,0.10);
+  font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;
+  color:var(--teal-bright);white-space:nowrap;
+}
+.spot-pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--teal-bright);
+  box-shadow:0 0 0 0 rgba(31,230,216,0.55);animation:spotPulse 2s infinite;
+}
+@keyframes spotPulse{70%{box-shadow:0 0 0 9px rgba(31,230,216,0);}100%{box-shadow:0 0 0 0 rgba(31,230,216,0);}}
+.spot-count{font-family:var(--mono);font-size:12px;color:var(--ink-dim);}
+.spot-ctrls{display:flex;gap:8px;}
+.spot-btn{
+  width:36px;height:36px;border-radius:50%;
+  display:grid;place-items:center;cursor:pointer;
+  border:1px solid var(--line);background:rgba(255,255,255,0.03);color:var(--ink);
+  transition:border-color 0.2s ease,color 0.2s ease,background 0.2s ease;
+}
+.spot-btn:hover{border-color:var(--teal);color:var(--teal-bright);background:rgba(2,200,187,0.10);}
+.spot-btn:focus-visible,.spot-tab:focus-visible,.spot-cta:focus-visible{outline:2px solid var(--teal-bright);outline-offset:3px;}
+.spot-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.spot-toggle .i-play{display:none;fill:currentColor;}
+.spot-toggle[aria-pressed="true"] .i-pause{display:none;}
+.spot-toggle[aria-pressed="true"] .i-play{display:block;}
+html[dir="rtl"] .spot-prev svg,html[dir="rtl"] .spot-next svg{transform:scaleX(-1);}
+
+/* Programmes : tous superposés dans la même cellule (hauteur stable, pas de saut de mise en page) */
+.spot-viewport{display:grid;touch-action:pan-y;}
+.spot-slide{
+  grid-area:1 / 1;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(16px,2.6vw,30px);
+  padding:0 0 20px;
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity 0.5s ease,transform 0.5s ease,visibility 0s linear 0.5s;
+}
+.spot-slide.is-active{opacity:1;visibility:visible;transform:none;transition-delay:0s;}
+.spot-icon{
+  position:relative;flex:none;width:84px;height:84px;border-radius:50%;
+  display:grid;place-items:center;
+  border:2px solid var(--teal);
+  background:radial-gradient(circle,rgba(2,200,187,0.20),rgba(2,200,187,0.03));
+  box-shadow:0 0 34px rgba(2,200,187,0.25);
+}
+.spot-icon::after{
+  content:"";position:absolute;inset:-9px;border-radius:50%;
+  border:1px dashed rgba(2,200,187,0.38);animation:spotSpin 18s linear infinite;
+}
+@keyframes spotSpin{to{transform:rotate(360deg);}}
+.spot-icon img{width:44px;height:44px;object-fit:contain;}
+.spot-copy{min-width:0;}
+.spot-copy p{margin:0;}
+.spot-title{
+  font-family:var(--display);font-weight:700;letter-spacing:-0.01em;line-height:1.15;
+  font-size:clamp(22px,2.7vw,34px);color:var(--ink);
+}
+.spot-desc{
+  margin-top:8px;max-width:64ch;color:var(--ink-soft);font-size:15px;line-height:1.55;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.spot-cta{white-space:normal;text-align:center;}
+
+/* Onglets = titres + barres de progression (5 s par programme) */
+.spot-tabs{
+  display:grid;grid-template-columns:repeat(var(--spot-n,3),1fr);gap:14px;
+  margin:0 calc(-1 * clamp(18px,3vw,30px));padding:0 clamp(18px,3vw,30px);
+  border-top:1px solid var(--line);
+}
+.spot-tab{
+  appearance:none;background:none;border:0;cursor:pointer;font-family:inherit;text-align:start;
+  display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:6px 10px;
+  padding:14px 2px 16px;color:var(--ink-dim);transition:color 0.2s ease;
+}
+.spot-tab:hover,.spot-tab.is-active{color:var(--ink);}
+.spot-tab-n{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--teal-bright);}
+.spot-tab-t{font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.spot-bar{grid-column:1 / -1;display:block;height:3px;border-radius:3px;background:rgba(244,247,247,0.10);overflow:hidden;}
+.spot-bar b{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,var(--teal),var(--teal-bright));}
+.spot-tab.is-done .spot-bar b{width:100%;}
+.spot-tab.is-active .spot-bar b{animation:spotFill var(--spot-delay,5s) linear forwards;}
+.spotlight.is-paused .spot-tab.is-active .spot-bar b{animation-play-state:paused;}
+@keyframes spotFill{from{width:0;}to{width:100%;}}
+.spotlight.is-single .spot-tabs,.spotlight.is-single .spot-ctrls,.spotlight.is-single .spot-count{display:none;}
+.spotlight.is-single .spot-slide{padding-bottom:22px;}
+
+@media (max-width:980px){
+  .spot-slide{grid-template-columns:auto 1fr;}
+  .spot-cta{grid-column:1 / -1;}
+}
+@media (max-width:560px){
+  .hero.has-spotlight{padding-top:92px;}
+  .spotlight{margin-bottom:30px;}
+  .spot-shell{border-radius:20px;}
+  .spot-icon{width:56px;height:56px;}
+  .spot-icon img{width:30px;height:30px;}
+  .spot-icon::after{inset:-6px;}
+  .spot-title{font-size:20px;}
+  .spot-desc{font-size:14px;}
+  .spot-badge{font-size:11px;padding:5px 10px;}
+  .spot-count{display:none;}           /* les barres numérotées en bas indiquent déjà la position */
+  .spot-ctrls{gap:6px;}
+  .spot-btn{width:32px;height:32px;}
+  .spot-btn svg{width:16px;height:16px;}
+  .spot-tab-t{display:none;}          /* les titres sont dans les aria-label ; on garde numéros + barres */
+  .spot-tabs{gap:10px;}
+}
+@media (prefers-reduced-motion: reduce){
+  .spot-slide{transition:none;transform:none;}
+  .spot-pulse,.spot-icon::after{animation:none;}
+}
+
 /* ============ RTL (arabe) — règles génériques pour toutes les pages ============
    Les polices latines n'ont pas de glyphes arabes : on bascule les 3 familles sur la
    police arabe du site. Le letter-spacing coupe la liaison des lettres arabes. */

@@ -58,6 +58,8 @@
   <div class="grid-overlay" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-glow-2" aria-hidden="true"></div>
+  <!-- Bandeau « À la une » : construit par script.js à partir des cartes de #available-programs -->
+  <div class="wrap spotlight" id="spotlight" hidden></div>
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow" data-i18n="hero.eyebrow">Coding · Learning · Innovation</span>
@@ -305,6 +307,10 @@
 </section>
 
 <!-- ============ AVAILABLE PROGRAMS ============ -->
+<!-- SOURCE DU BANDEAU « À LA UNE » (haut de page) :
+     le bandeau affiche automatiquement les 3 cartes .avail-card les plus récentes de cette liste.
+     Pour publier une nouveauté, ajoutez simplement une carte à la FIN de la liste (la dernière = la plus récente).
+     Attributs optionnels : data-icon="images/xxx.png" (icône) et data-published="AAAA-MM-JJ" (tri par date). -->
 <section id="available-programs">
   <div class="wrap">
     <div class="section-head reveal">
@@ -313,17 +319,17 @@
       <p data-i18n="avail.p">Two new programs just launched — explore them below.</p>
     </div>
     <div class="programs-row avail-row">
-      <a class="prog-card avail-card reveal" href="pages/pfe-before-pfe.html">
+      <a class="prog-card avail-card reveal" href="pages/pfe-before-pfe.html" data-icon="images/project-based-education.png">
         <h3 data-i18n="avail.c1title">PFE Preparation</h3>
         <p data-i18n="avail.c1desc">Guided, hands-on support to plan, build and defend your final-year project.</p>
         <span class="avail-cta" data-i18n="avail.cta">Learn more →</span>
       </a>
-      <a class="prog-card avail-card reveal" href="pages/programming-for-kids.html">
+      <a class="prog-card avail-card reveal" href="pages/programming-for-kids.html" data-icon="images/kids-explorers.png">
         <h3 data-i18n="avail.c2title">Programming for Kids</h3>
         <p data-i18n="avail.c2desc">A playful introduction to code, built just for young learners.</p>
         <span class="avail-cta" data-i18n="avail.cta">Learn more →</span>
       </a>
-      <a class="prog-card avail-card reveal" href="pages/internship-2026.html">
+      <a class="prog-card avail-card reveal" href="pages/internship-2026.html" data-icon="images/supervision.png">
         <h3 data-i18n="avail.c3title">Stages PFE accompagnés</h3>
         <p data-i18n="avail.c3desc">Un encadrement technique, académique et méthodologique pour réaliser votre véritable projet de fin d'études, du cadrage à la soutenance.</p>
         <span class="avail-cta" data-i18n="avail.c3cta">Découvrir nos stages PFE accompagnés →</span>
